@@ -3,18 +3,190 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>WLB — Table of Contents</title>
+<title>WLB — Weiye Life Budget</title>
 <style>
-:root{--ink:#172033;--muted:#657287;--line:#dbe3ec;--blue:#0b5a9c;--paper:#fff;--bg:#f5f8fb}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,#edf7fb 0%,#fff 360px);color:var(--ink)}header{padding:34px 30px 20px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}main{max-width:1160px;margin:0 auto;padding:28px}.eyebrow{text-transform:uppercase;letter-spacing:.1em;color:#53677a;font-size:12px;font-weight:900}h1{margin:6px 0 8px;font-size:40px;letter-spacing:-.04em}p{color:#3a4657;line-height:1.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 24px rgba(20,40,70,.05);min-height:300px;display:flex;flex-direction:column}.num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:900;margin-bottom:14px}h2{margin:0 0 10px;font-size:24px;letter-spacing:-.025em}ul{padding-left:20px;color:#3a4657;line-height:1.6}.actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:11px 16px;background:var(--blue);color:#fff;font-weight:850}.button.secondary{background:#fff;color:var(--blue);border:1px solid var(--blue)}.note{margin:0 0 18px;border:1px solid #f0d6aa;background:#fff9ec;border-radius:18px;padding:16px}@media(max-width:850px){.grid{grid-template-columns:1fr}h1{font-size:32px}}</style>
+:root{
+  --ink:#172033;
+  --muted:#667386;
+  --line:#d9e2eb;
+  --paper:#ffffff;
+  --soft:#f6f9fc;
+  --blue:#0b5a9c;
+  --blue2:#e5f3fb;
+  --green:#18724a;
+  --gold:#f4b400;
+  --purple:#7456a8;
+  --shadow:0 18px 45px rgba(20,40,70,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 10%,rgba(11,90,156,.12),transparent 30%),
+    radial-gradient(circle at 90% 16%,rgba(244,180,0,.10),transparent 28%),
+    linear-gradient(180deg,#edf7fb 0%,#fbfdff 330px,#f6f9fc 100%);
+}
+a{color:inherit}
+.shell{width:min(1180px,calc(100% - 32px));margin:0 auto}
+nav{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px 0;
+}
+.brand{font-weight:950;letter-spacing:-.03em;font-size:18px}
+.navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.navlinks a{
+  text-decoration:none;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);
+  padding:9px 13px;color:var(--muted);font-size:13px;font-weight:800;
+}
+.hero{padding:44px 0 32px;display:grid;grid-template-columns:1.03fr .97fr;gap:26px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.1em;color:#53677a;font-size:12px;font-weight:950;margin-bottom:14px}
+h1{font-size:clamp(44px,7vw,76px);line-height:.95;letter-spacing:-.065em;margin:0 0 18px}
+.hero p{font-size:18px;line-height:1.6;color:#38485a;max-width:720px;margin:0 0 22px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:900;
+  background:var(--blue);color:#fff;border:1px solid var(--blue);
+}
+.button.secondary{background:#fff;color:var(--blue)}
+.hero-card{
+  border:1px solid var(--line);background:rgba(255,255,255,.88);border-radius:28px;padding:18px;box-shadow:var(--shadow);
+}
+.screen{
+  background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  box-shadow:0 16px 34px rgba(20,40,70,.08);
+}
+.browser{height:38px;background:#f7f9fc;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#cdd7e1}.dot:nth-child(2){background:#dfe6ed}.dot:nth-child(3){background:#b7d2e8}
+.preview-body{padding:16px;background:linear-gradient(180deg,#fafdff,#f2f7fb)}
+.preview-title{height:18px;width:54%;border-radius:999px;background:#172033;margin-bottom:12px;opacity:.9}
+.preview-sub{height:9px;width:78%;border-radius:999px;background:#b9c8d6;margin-bottom:6px}.preview-sub.short{width:50%}
+.preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.mini-card{border:1px solid #dbe3ec;background:#fff;border-radius:14px;padding:10px;min-height:70px}
+.mini-card b{display:block;height:10px;border-radius:999px;background:#0b5a9c;width:45%;margin-bottom:12px}.mini-card span{display:block;height:8px;border-radius:999px;background:#d7e1ea;margin-bottom:7px}.mini-card span:last-child{width:65%}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 34px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 10px 24px rgba(20,40,70,.045)}
+.stat span{display:block;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:900;font-size:12px}.stat b{display:block;font-size:25px;letter-spacing:-.03em;margin-top:4px}.good{color:var(--green)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:12px 0 16px}
+h2{font-size:34px;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);max-width:500px;line-height:1.5;margin:0}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px}
+.landing-card{
+  position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;padding:0;box-shadow:var(--shadow);
+}
+.card-image{min-height:250px;background:linear-gradient(135deg,#e8f5fb,#fff);padding:18px;border-bottom:1px solid var(--line)}
+.mock-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.mock-pill{height:26px;border-radius:999px;background:#0b5a9c;width:110px}.mock-small{height:18px;border-radius:999px;background:#d9e5ef;width:72px}
+.balance-graphic{display:grid;grid-template-columns:1fr 1fr;gap:12px}.balance-graphic .panel{background:#fff;border:1px solid #d9e2eb;border-radius:18px;padding:14px;min-height:88px}.big-number{font-size:26px;font-weight:950;letter-spacing:-.04em}.label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}.bar{height:9px;background:#e9eef4;border-radius:999px;margin-top:14px;overflow:hidden}.bar i{display:block;height:100%;border-radius:999px;background:var(--blue);width:72%}.bar.gold i{background:var(--gold);width:42%}.bar.green i{background:var(--green);width:88%}
+.dashboard-graphic{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.budget-tile{background:#fff;border:1px solid #d9e2eb;border-radius:16px;padding:12px}.battery{width:44px;height:20px;border:2px solid #172033;border-radius:4px;padding:2px;display:flex;gap:2px;margin-bottom:10px;position:relative}.battery:after{content:"";position:absolute;right:-7px;top:4px;width:5px;height:8px;background:#172033;border-radius:0 2px 2px 0}.battery span{flex:1;background:#21c65a;border-radius:1px}.budget-tile strong{font-size:14px}.budget-tile p{margin:6px 0 0;color:var(--muted);font-size:12px;line-height:1.3}
+.card-content{padding:22px}.card-content h3{font-size:25px;letter-spacing:-.035em;margin:0 0 10px}.card-content p{line-height:1.55;color:#3a4657;margin:0 0 16px}.feature-list{display:grid;gap:8px;margin:0 0 18px;padding:0;list-style:none}.feature-list li{display:flex;gap:8px;color:#3a4657}.feature-list li:before{content:"•";color:var(--blue);font-weight:950}.link-row{display:flex;gap:10px;flex-wrap:wrap}.text-link{display:inline-flex;align-items:center;text-decoration:none;font-weight:900;color:var(--blue)}
+footer{padding:24px 0 44px;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:950px){.hero,.cards,.stats{grid-template-columns:1fr}.preview-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:8px}}
+@media(max-width:560px){nav{align-items:flex-start;flex-direction:column}.stats{gap:10px}.preview-grid,.balance-graphic,.dashboard-graphic{grid-template-columns:1fr}h1{font-size:42px}.cards{gap:14px}}
+</style>
 </head>
 <body>
-<header><div class="eyebrow">WLB / Weiye Life Budget</div><h1>Table of Contents</h1><p>Front door for the WLB site. Use Tab 1 for the executive balance plan. Use Tab 2 for the detailed Self-Direction budget dashboard.</p></header>
-<main>
-<div class="note"><strong>Recommended review order:</strong> start with Wei’s Balance Plan, then open the Self-Direction Dashboard for category-by-category rules, examples, and plan direction.</div>
-<section class="grid">
-<article class="card"><div class="num">1</div><h2>Wei’s Balance Plan</h2><p>Reduced-noise status page showing current balance, planned spending, needed transfers, and projected remaining balance through 11/30.</p><ul><li>Current balance by category</li><li>Com Hab / Respite / IDGS plan</li><li>IDGS-to-Respite transfer</li><li>Projected result</li></ul><div class="actions"><a class="button" href="./wei-balance-plan.html">Open Tab 1</a></div></article>
-<article class="card"><div class="num">2</div><h2>Self-Direction Dashboard</h2><p>Detailed working dashboard explaining each Self-Direction budget category, sublines, limitations, examples, and Weiye-specific plan direction.</p><ul><li>Com Hab</li><li>Respite</li><li>IDGS</li><li>OTPS</li><li>FRR, Brokerage, FI</li></ul><div class="actions"><a class="button" href="./self-direction-dashboard.html">Open Tab 2</a></div></article>
-</section>
-</main>
+<div class="shell">
+  <nav>
+    <div class="brand">WLB · Weiye Life Budget</div>
+    <div class="navlinks">
+      <a href="./wei-balance-plan.html">Balance Plan</a>
+      <a href="./self-direction-dashboard.html">Self-Direction Dashboard</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Self-Direction planning hub</div>
+      <h1>One clear place for Weiye’s plan.</h1>
+      <p>This site organizes the budget into two views: a fast executive balance plan and a deeper category-by-category dashboard for Com Hab, Respite, IDGS, OTPS, FRR, Brokerage, and FI.</p>
+      <div class="hero-actions">
+        <a class="button" href="./wei-balance-plan.html">Open Balance Plan</a>
+        <a class="button secondary" href="./self-direction-dashboard.html">Open Dashboard</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Website preview graphic">
+      <div class="screen">
+        <div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+        <div class="preview-body">
+          <div class="preview-title"></div>
+          <div class="preview-sub"></div>
+          <div class="preview-sub short"></div>
+          <div class="preview-grid">
+            <div class="mini-card"><b></b><span></span><span></span></div>
+            <div class="mini-card"><b></b><span></span><span></span></div>
+            <div class="mini-card"><b></b><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Plan snapshot">
+    <div class="stat"><span>Usable balance</span><b>$51,137</b></div>
+    <div class="stat"><span>Respite transfer</span><b>$7,000</b></div>
+    <div class="stat"><span>IDGS after plan</span><b class="good">$161</b></div>
+    <div class="stat"><span>Through date</span><b>11/30</b></div>
+  </section>
+
+  <div class="section-head">
+    <h2>Choose a page</h2>
+    <p>Use the first page for the quick decision story. Use the second page when you need the rule logic, examples, and category plan details.</p>
+  </div>
+
+  <section class="cards">
+    <article class="landing-card">
+      <div class="card-image" aria-hidden="true">
+        <div class="mock-header"><div class="mock-pill"></div><div class="mock-small"></div></div>
+        <div class="balance-graphic">
+          <div class="panel"><div class="label">Current usable</div><div class="big-number">$51.1k</div><div class="bar green"><i></i></div></div>
+          <div class="panel"><div class="label">IDGS → Respite</div><div class="big-number">$7k</div><div class="bar gold"><i></i></div></div>
+          <div class="panel"><div class="label">Com Hab gap</div><div class="big-number">$2.1k</div><div class="bar"><i></i></div></div>
+          <div class="panel"><div class="label">Remaining IDGS</div><div class="big-number">$161</div><div class="bar gold"><i></i></div></div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Tab 1 — Wei’s Balance Plan</h3>
+        <p>A clean executive page that answers: what do we have, what are we spending, what needs to move, and what remains?</p>
+        <ul class="feature-list">
+          <li>Current balance by category</li>
+          <li>Staffing, class, and transfer summary</li>
+          <li>Projected result through 11/30</li>
+        </ul>
+        <div class="link-row">
+          <a class="button" href="./wei-balance-plan.html">Open Wei’s Balance Plan</a>
+          <a class="text-link" href="https://wlb-mu.vercel.app/wei-balance-plan.html">Direct link →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="landing-card">
+      <div class="card-image" aria-hidden="true">
+        <div class="mock-header"><div class="mock-pill"></div><div class="mock-small"></div></div>
+        <div class="dashboard-graphic">
+          <div class="budget-tile"><div class="battery"><span></span><span></span><span></span><span></span></div><strong>Com Hab</strong><p>goal-based skill building</p></div>
+          <div class="budget-tile"><div class="battery"><span></span><span></span><span></span><span></span></div><strong>Respite</strong><p>caregiver relief</p></div>
+          <div class="budget-tile"><div class="battery"><span></span><span></span><span></span><span></span></div><strong>IDGS</strong><p>classes + supports</p></div>
+          <div class="budget-tile"><div class="battery"><span></span><span></span><span></span><span></span></div><strong>OTPS</strong><p>receipts + claims</p></div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Tab 2 — Self-Direction Dashboard</h3>
+        <p>A deeper working page with one tab per category: definition, sublines, limitations, examples, and direction for Weiye’s plan.</p>
+        <ul class="feature-list">
+          <li>Com Hab, Respite, IDGS, OTPS, FRR, Brokerage, FI</li>
+          <li>Examples of how to use each category</li>
+          <li>Guardrails for broker/FI review</li>
+        </ul>
+        <div class="link-row">
+          <a class="button" href="./self-direction-dashboard.html">Open Self-Direction Dashboard</a>
+          <a class="text-link" href="https://wlb-mu.vercel.app/self-direction-dashboard.html">Direct link →</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+<footer>WLB · Weiye Life Budget · Planning dashboard for review and discussion</footer>
 </body>
 </html>
