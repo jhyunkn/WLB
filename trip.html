@@ -3,49 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WLB — Trip</title>
+  <title>WLB — California Road Trip</title>
   <style>
-    :root{--ink:#172033;--muted:#667386;--line:#d9e2eb;--blue:#0b5a9c;--green:#18724a;--shadow:0 18px 45px rgba(20,40,70,.08)}
+    :root{
+      --ink:#172033;--muted:#667386;--line:#d9e2eb;--paper:#fbfdff;--blue:#0b5a9c;--green:#18724a;--gold:#d19b12;--sand:#f3d59b;--clay:#bb6b39;--red:#9b3b2f;--shadow:0 18px 45px rgba(20,40,70,.08)
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 10%,rgba(24,114,74,.13),transparent 30%),radial-gradient(circle at 90% 16%,rgba(11,90,156,.10),transparent 28%),linear-gradient(180deg,#edf7fb 0%,#fbfdff 330px,#f6f9fc 100%)}
-    .shell{width:min(1080px,calc(100% - 32px));margin:0 auto}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}.brand{font-weight:950;letter-spacing:-.03em;font-size:18px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);padding:9px 13px;color:var(--muted);font-size:13px;font-weight:800}
-    .hero{padding:64px 0 30px}.eyebrow{text-transform:uppercase;letter-spacing:.1em;color:#53677a;font-size:12px;font-weight:950;margin-bottom:14px}h1{font-size:clamp(46px,8vw,86px);line-height:.95;letter-spacing:-.07em;margin:0 0 18px}.hero p{font-size:18px;line-height:1.6;color:#38485a;max-width:760px;margin:0 0 22px}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:900;background:var(--green);color:#fff;border:1px solid var(--green)}
-    .panel{background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:28px;margin:18px 0 44px}.panel h2{font-size:30px;letter-spacing:-.04em;margin:0 0 10px}.panel p{color:#3a4657;line-height:1.6;margin:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px}.tile{border:1px solid var(--line);border-radius:18px;background:#fbfdff;padding:16px;min-height:96px}.tile span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}.tile strong{display:block;font-size:22px;letter-spacing:-.04em;margin-top:6px}
-    footer{padding:24px 0 44px;color:var(--muted);font-size:13px;text-align:center}@media(max-width:720px){nav{align-items:flex-start;flex-direction:column}}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 10%,rgba(24,114,74,.14),transparent 28%),radial-gradient(circle at 82% 7%,rgba(209,155,18,.14),transparent 26%),linear-gradient(180deg,#edf7fb 0%,#fbfdff 360px,#f6f2ea 100%)}
+    .shell{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}.brand{font-weight:950;letter-spacing:-.03em;font-size:18px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);padding:9px 13px;color:var(--muted);font-size:13px;font-weight:850}
+    .hero{padding:58px 0 36px;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:end}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:#53677a;font-size:12px;font-weight:950;margin-bottom:14px}h1{font-size:clamp(44px,7vw,82px);line-height:.92;letter-spacing:-.075em;margin:0 0 18px}.hero p{font-size:18px;line-height:1.6;color:#38485a;max-width:770px;margin:0 0 22px}.actions{display:flex;gap:10px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:950;background:var(--green);color:#fff;border:1px solid var(--green)}.button.secondary{background:#fff;color:var(--green)}
+    .route-card{background:#fff;border:1px solid var(--line);border-radius:34px;box-shadow:var(--shadow);padding:22px;overflow:hidden}.map-strip{height:260px;border-radius:24px;background:linear-gradient(135deg,#dcefdc,#fff8e7 42%,#f1c07d 65%,#d3e8f5);position:relative;border:1px solid var(--line)}.dot{position:absolute;width:16px;height:16px;border-radius:999px;background:var(--green);box-shadow:0 0 0 6px rgba(24,114,74,.14)}.dot.sf{left:12%;top:18%}.dot.sequoia{left:45%;top:56%;background:#0b5a9c}.dot.dv{left:72%;top:70%;background:#bb6b39}.dot.yose{left:55%;top:25%;background:#d19b12}.path{position:absolute;inset:0}.label{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(20,40,70,.08);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:950}.l-sf{left:7%;top:8%}.l-seq{left:35%;top:64%}.l-dv{left:66%;top:79%}.l-yos{left:49%;top:12%}
+    .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 8px}.stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 10px 26px rgba(20,40,70,.05)}.stat span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:950}.stat strong{display:block;font-size:22px;letter-spacing:-.04em;margin-top:6px}
+    section{margin:30px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:0 0 16px}h2{font-size:34px;letter-spacing:-.045em;margin:0}.section-head p{color:var(--muted);max-width:650px;line-height:1.5;margin:0}.panel{background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{border:1px solid var(--line);background:#fff;border-radius:24px;padding:18px}.card h3{font-size:22px;letter-spacing:-.035em;margin:0 0 8px}.card p,.card li{color:#3a4657;line-height:1.55}.card p{margin:0}.tag{display:inline-flex;margin-bottom:10px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.08em;color:#53677a;background:#fbfdff}
+    .timeline{display:grid;gap:14px}.day{display:grid;grid-template-columns:130px 1fr;gap:16px;align-items:stretch}.date{border:1px solid var(--line);border-radius:24px;background:#fbfdff;padding:16px;text-align:center}.date b{display:block;font-size:24px;letter-spacing:-.04em}.date span{display:block;color:var(--muted);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.daybody{border:1px solid var(--line);border-radius:24px;background:#fff;padding:18px;box-shadow:0 10px 26px rgba(20,40,70,.04)}.daybody h3{margin:0 0 8px;font-size:24px;letter-spacing:-.035em}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fbfdff;color:#53677a;font-size:12px;font-weight:900}.columns{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{border:1px dashed #c8d4df;border-radius:18px;padding:13px;background:#fbfdff}.mini b{display:block;margin-bottom:6px}.mini ul{margin:0;padding-left:18px;color:#3a4657;line-height:1.52}
+    .budget{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.table{width:100%;border-collapse:separate;border-spacing:0 8px}.table th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.table td{background:#fbfdff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px}.table td:first-child{border-left:1px solid var(--line);border-radius:14px 0 0 14px;font-weight:850}.table td:last-child{border-right:1px solid var(--line);border-radius:0 14px 14px 0;text-align:right;font-weight:950}.warning{background:#fff7ea;border:1px solid #efd1a0;border-radius:24px;padding:18px}.warning h3{margin:0 0 8px;color:#8a3b1f}.warning p{margin:0;color:#5c4433;line-height:1.55}.source{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}
+    footer{padding:24px 0 44px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:900px){.hero,.budget{grid-template-columns:1fr}.quick{grid-template-columns:1fr 1fr}.columns{grid-template-columns:1fr}.day{grid-template-columns:1fr}}
+    @media(max-width:720px){nav{align-items:flex-start;flex-direction:column}.quick{grid-template-columns:1fr}h1{font-size:48px}.map-strip{height:220px}}
   </style>
 </head>
 <body>
   <div class="shell">
     <nav>
-      <div class="brand">WLB · Trip</div>
+      <div class="brand">WLB · California Road Trip</div>
       <div class="navlinks">
         <a href="./index.html">Index</a>
-        <a href="./wei-balance-plan.html">Wei Balance</a>
-        <a href="./self-direction-dashboard.html">Dashboard</a>
-        <a href="./comhab-theme-board.html">Theme Board</a>
-        <a href="./sandbox.html">Sand Box</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#lodging">Lodging</a>
+        <a href="#budget">Budget</a>
+        <a href="#checklist">Checklist</a>
       </div>
     </nav>
 
     <section class="hero">
-      <div class="eyebrow">Tab 5 placeholder</div>
-      <h1>Trip page.</h1>
-      <p>This page is ready for the itinerary content. The landing page can now click into this fifth tab, and the detailed trip plan can be added here next.</p>
-      <a class="button" href="./index.html">Back to Index</a>
+      <div>
+        <div class="eyebrow">July 10–18 · NYC → San Francisco loop</div>
+        <h1>California parks loop.</h1>
+        <p>A 9-day rental-car route from San Francisco through Sequoia, Death Valley, Yosemite, and back to San Francisco. The plan balances iconic scenery with realistic driving days, summer heat limits, and national park congestion.</p>
+        <div class="actions">
+          <a class="button" href="#itinerary">View daily plan</a>
+          <a class="button secondary" href="#budget">View cost range</a>
+        </div>
+      </div>
+      <div class="route-card">
+        <div class="map-strip" aria-label="Abstract map of San Francisco, Sequoia, Death Valley, Yosemite loop">
+          <svg class="path" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M12,18 C26,28 35,42 45,56 C55,70 63,73 72,70 C70,58 63,40 55,25 C43,18 25,12 12,18" fill="none" stroke="#172033" stroke-width="1.6" stroke-dasharray="4 4" opacity=".45"/></svg>
+          <div class="dot sf"></div><div class="dot sequoia"></div><div class="dot dv"></div><div class="dot yose"></div>
+          <div class="label l-sf">San Francisco</div><div class="label l-seq">Sequoia</div><div class="label l-dv">Death Valley</div><div class="label l-yos">Yosemite</div>
+        </div>
+        <div class="quick">
+          <div class="stat"><span>Trip length</span><strong>9 days</strong></div>
+          <div class="stat"><span>Core route</span><strong>Loop</strong></div>
+          <div class="stat"><span>Car days</span><strong>8</strong></div>
+          <div class="stat"><span>Parks</span><strong>3</strong></div>
+        </div>
+      </div>
     </section>
 
-    <section class="panel">
-      <h2>Ready for direction</h2>
-      <p>Use this page for the route, dates, lodging, daily schedule, cost estimate, maps, images, and notes once the trip content is confirmed.</p>
+    <section>
+      <div class="section-head"><h2>Strategy</h2><p>This is not a maximum-mileage itinerary. It is a controlled loop: long drives are placed between lodge bases, Death Valley is handled at low-risk hours, and Yosemite gets two nights so it does not become a rushed pass-through.</p></div>
       <div class="grid">
-        <div class="tile"><span>Status</span><strong>Placeholder</strong></div>
-        <div class="tile"><span>Type</span><strong>Trip Plan</strong></div>
-        <div class="tile"><span>Content</span><strong>Pending</strong></div>
-        <div class="tile"><span>Next</span><strong>Itinerary</strong></div>
+        <div class="card"><span class="tag">Route logic</span><h3>SF → Sequoia → Death Valley → East Sierra → Yosemite → SF</h3><p>The cleanest structure is to enter the Sierra from the west, cross south and east toward Death Valley, recover north along US-395, then enter Yosemite through Tioga Pass if open.</p></div>
+        <div class="card"><span class="tag">Heat logic</span><h3>Death Valley is sunrise, sunset, and car-based.</h3><p>In July, avoid lower-elevation hikes. Use Furnace Creek / Stovepipe as a short scenic base, then leave before the extreme afternoon heat.</p></div>
+        <div class="card"><span class="tag">Crowd logic</span><h3>Yosemite needs early starts.</h3><p>No season-wide timed-entry reservation is planned for 2026, but parking and congestion still shape the day. Treat 6:00–7:00 AM arrival as the operating rule.</p></div>
+      </div>
+    </section>
+
+    <section id="itinerary">
+      <div class="section-head"><h2>Daily itinerary</h2><p>Dates assume you fly NYC to San Francisco on Friday, July 10, pick up a rental car, and fly back from San Francisco on Saturday, July 18.</p></div>
+      <div class="timeline">
+        <article class="day"><div class="date"><b>7/10</b><span>Fri</span></div><div class="daybody"><h3>Fly NYC → San Francisco</h3><div class="meta"><span class="pill">Sleep: San Francisco</span><span class="pill">Drive: airport/local only</span></div><div class="columns"><div class="mini"><b>Plan</b><ul><li>Fly into SFO, pick up rental car.</li><li>Keep the first night simple: airport hotel, SOMA, Union Square, or Marina.</li><li>Buy road-trip supplies: water case, cooler, snacks, sunscreen.</li></ul></div><div class="mini"><b>Why</b><ul><li>Do not begin the mountain drive after a cross-country flight.</li><li>Use this day to absorb delay risk and stage the car.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/11</b><span>Sat</span></div><div class="daybody"><h3>San Francisco → Sequoia base</h3><div class="meta"><span class="pill">Approx. 5–6 hr drive</span><span class="pill">Sleep: Three Rivers / Wuksachi</span></div><div class="columns"><div class="mini"><b>Plan</b><ul><li>Leave SF early, drive toward Three Rivers / Sequoia.</li><li>Afternoon: Giant Forest Museum or General Sherman if parking allows.</li><li>Evening: settle near park entrance.</li></ul></div><div class="mini"><b>Lodging target</b><ul><li>Best: Wuksachi Lodge inside the park.</li><li>Practical: Three Rivers hotels / cabins.</li><li>Fallback: Visalia for cheaper availability, but adds driving.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/12</b><span>Sun</span></div><div class="daybody"><h3>Sequoia full day</h3><div class="meta"><span class="pill">Low/moderate hiking</span><span class="pill">Sleep: Three Rivers / Wuksachi</span></div><div class="columns"><div class="mini"><b>Core route</b><ul><li>General Sherman Tree early.</li><li>Congress Trail or Big Trees Trail.</li><li>Moro Rock only if weather, parking, and energy are good.</li><li>Tunnel Log / Crescent Meadow as optional add-ons.</li></ul></div><div class="mini"><b>Operating rule</b><ul><li>Use shuttles around Giant Forest if parking is tight.</li><li>Carry layers: groves can be cool early, foothills hot midday.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/13</b><span>Mon</span></div><div class="daybody"><h3>Sequoia → Death Valley</h3><div class="meta"><span class="pill">Approx. 7–8 hr drive</span><span class="pill">Sleep: Furnace Creek / Stovepipe Wells</span></div><div class="columns"><div class="mini"><b>Plan</b><ul><li>Depart early via Central Valley / Bakersfield / Ridgecrest corridor.</li><li>Enter Death Valley late afternoon, not midday if avoidable.</li><li>Sunset: Zabriskie Point or Mesquite Flat Sand Dunes from short-access viewpoints.</li></ul></div><div class="mini"><b>Risk control</b><ul><li>Top off gas before entering the park.</li><li>Carry more water than you think you need.</li><li>No remote gravel-road adventure in a rental car.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/14</b><span>Tue</span></div><div class="daybody"><h3>Death Valley sunrise → Eastern Sierra</h3><div class="meta"><span class="pill">Approx. 4.5–6 hr drive</span><span class="pill">Sleep: Mammoth Lakes / Lee Vining</span></div><div class="columns"><div class="mini"><b>Morning window</b><ul><li>Sunrise: Zabriskie Point.</li><li>Early drive: Badwater Basin, Artist Drive, Furnace Creek.</li><li>Stop sightseeing by late morning if temperatures spike.</li></ul></div><div class="mini"><b>Afternoon recovery</b><ul><li>Drive north on US-395 toward Mammoth Lakes or Lee Vining.</li><li>Optional: Alabama Hills / Lone Pine if you want a visual stop.</li><li>Sleep cool at elevation before Yosemite.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/15</b><span>Wed</span></div><div class="daybody"><h3>Eastern Sierra → Yosemite high country</h3><div class="meta"><span class="pill">Tioga Pass route if open</span><span class="pill">Sleep: Yosemite / El Portal / Mariposa</span></div><div class="columns"><div class="mini"><b>Plan</b><ul><li>Enter Yosemite through Tioga Road if open.</li><li>Stops: Tuolumne Meadows, Tenaya Lake, Olmsted Point.</li><li>Continue toward Yosemite Valley or west-side lodging.</li></ul></div><div class="mini"><b>Backup</b><ul><li>If Tioga Pass is closed or delayed, reroute west around the Sierra. This is much longer and may require a lodging adjustment.</li><li>Check road status before leaving Mammoth / Lee Vining.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/16</b><span>Thu</span></div><div class="daybody"><h3>Yosemite Valley full day</h3><div class="meta"><span class="pill">Start before 7 AM</span><span class="pill">Sleep: Yosemite / El Portal / Mariposa</span></div><div class="columns"><div class="mini"><b>Core day</b><ul><li>Morning: Tunnel View, Valley Loop, Cook's Meadow, Yosemite Falls area.</li><li>Active option: Mist Trail to Vernal Fall Footbridge or beyond only if conditions and energy are good.</li><li>Afternoon: Glacier Point or Sentinel Dome area if road/parking conditions allow.</li></ul></div><div class="mini"><b>Why</b><ul><li>This is the visual peak of the trip.</li><li>Two nights protects you from traffic, parking, and weather variability.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/17</b><span>Fri</span></div><div class="daybody"><h3>Yosemite → San Francisco</h3><div class="meta"><span class="pill">Approx. 4–5.5 hr drive</span><span class="pill">Sleep: San Francisco / airport area</span></div><div class="columns"><div class="mini"><b>Plan</b><ul><li>Optional sunrise in Valley or Mariposa Grove if positioned south.</li><li>Drive back to SF with buffer for Bay Area traffic.</li><li>Return car tonight or keep it for airport drop-off next morning.</li></ul></div><div class="mini"><b>Evening</b><ul><li>Easy SF dinner, walk, pack, and reset.</li><li>Do not schedule a high-pressure final activity.</li></ul></div></div></div></article>
+        <article class="day"><div class="date"><b>7/18</b><span>Sat</span></div><div class="daybody"><h3>Fly San Francisco → NYC</h3><div class="meta"><span class="pill">Departure day</span><span class="pill">Return car / fly home</span></div><div class="columns"><div class="mini"><b>Plan</b><ul><li>Return rental car at SFO.</li><li>Fly back to NYC.</li><li>Keep breakfast and airport timing simple.</li></ul></div><div class="mini"><b>Note</b><ul><li>Book a return flight with enough margin for rental-car return and terminal transfer.</li></ul></div></div></div></article>
+      </div>
+    </section>
+
+    <section id="lodging">
+      <div class="section-head"><h2>Lodging plan</h2><p>Book by geography first, then quality. The wrong lodging location can turn a good route into a daily driving penalty.</p></div>
+      <div class="grid">
+        <div class="card"><span class="tag">7/10</span><h3>San Francisco</h3><p>Use SF airport area if your flight lands late. Use Marina / Union Square / SOMA if you want one city evening. Goal: easy start next morning.</p></div>
+        <div class="card"><span class="tag">7/11–7/12</span><h3>Sequoia base</h3><p>Priority order: Wuksachi Lodge, Three Rivers, then Visalia. Staying inside/near the park saves time and protects your General Sherman morning.</p></div>
+        <div class="card"><span class="tag">7/13</span><h3>Death Valley</h3><p>Best: The Oasis / Ranch at Death Valley or Stovepipe Wells. Practical fallback: Pahrump, but that changes the flow and adds driving.</p></div>
+        <div class="card"><span class="tag">7/14</span><h3>Eastern Sierra</h3><p>Mammoth Lakes is more comfortable and has more services. Lee Vining is strategically closer to Tioga Pass and Yosemite's east entrance.</p></div>
+        <div class="card"><span class="tag">7/15–7/16</span><h3>Yosemite base</h3><p>Priority order: Yosemite Valley lodging, El Portal, Wawona/Tenaya, Mariposa, Groveland. Closer is worth paying for in July.</p></div>
+        <div class="card"><span class="tag">7/17</span><h3>San Francisco / SFO</h3><p>Stay near SFO if your 7/18 flight is early. Stay in SF proper if your flight is later and you want one final city night.</p></div>
+      </div>
+    </section>
+
+    <section id="budget">
+      <div class="section-head"><h2>Estimated budget</h2><p>Working estimate for 2 adults. Exact flight, lodging, and car prices should be checked at booking. July is peak season, so the lodging range is the main swing factor.</p></div>
+      <div class="budget">
+        <div class="panel">
+          <table class="table">
+            <thead><tr><th>Category</th><th>Planning range</th></tr></thead>
+            <tbody>
+              <tr><td>Flights NYC ↔ SFO</td><td>$700–$1,400</td></tr>
+              <tr><td>Rental car, 8 days</td><td>$650–$1,100</td></tr>
+              <tr><td>Gas + parking + tolls</td><td>$300–$500</td></tr>
+              <tr><td>Lodging, 8 nights</td><td>$1,800–$3,600</td></tr>
+              <tr><td>Food + coffee + snacks</td><td>$900–$1,500</td></tr>
+              <tr><td>Park pass / entrance</td><td>$80 recommended</td></tr>
+              <tr><td>Buffer</td><td>$400–$800</td></tr>
+              <tr><td>Total planning range</td><td>$4,830–$8,980</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warning">
+          <h3>Buy the America the Beautiful pass.</h3>
+          <p>For a multi-park route, the $80 interagency annual pass is cleaner than paying separate private-vehicle fees at each national park. It also simplifies re-entry and unexpected park adjustments.</p>
+          <p class="source">Fee logic: Yosemite and Sequoia/Kings Canyon private-vehicle passes are each $35, Death Valley is $30, and the interagency annual pass is $80 for U.S. citizens/residents.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <div class="section-head"><h2>Booking checklist</h2><p>Sequence matters. Secure the scarce pieces first, then optimize the rest.</p></div>
+      <div class="grid">
+        <div class="card"><span class="tag">1</span><h3>Flights</h3><p>Book NYC → SFO for July 10 and SFO → NYC for July 18. Morning/early afternoon arrival on July 10 makes the next day easier.</p></div>
+        <div class="card"><span class="tag">2</span><h3>Lodging</h3><p>Book Yosemite and Sequoia first. Then Death Valley. Then SF and Eastern Sierra. Park-adjacent lodging is the scarce resource.</p></div>
+        <div class="card"><span class="tag">3</span><h3>Car</h3><p>Reserve a comfortable fuel-efficient car or compact SUV. Avoid low-clearance anxiety, but do not rely on off-road travel in a rental.</p></div>
+        <div class="card"><span class="tag">4</span><h3>Road checks</h3><p>Before each mountain/desert segment, check NPS and Caltrans for closures, construction, smoke, flooding, and Tioga Pass status.</p></div>
+        <div class="card"><span class="tag">5</span><h3>Supplies</h3><p>Water case, electrolyte packets, sunscreen, hats, light layers, cooler, offline maps, power bank, and printed lodging addresses.</p></div>
+        <div class="card"><span class="tag">6</span><h3>Operating rules</h3><p>Start early. Do not hike Death Valley low elevations in heat. Treat Yosemite parking as a morning task. Build buffers into every long drive.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <h2>Critical notes</h2>
+        <div class="grid">
+          <div class="card"><h3>Yosemite entry</h3><p>For 2026, Yosemite announced it will not use a season-wide timed reservation system. This helps flexibility, but not parking. Arrive early, especially July 15–16.</p></div>
+          <div class="card"><h3>Sequoia conditions</h3><p>Summer conditions vary by elevation. Lower foothills can be hot while the groves are cooler. Parking at Giant Forest and General Sherman can fill early.</p></div>
+          <div class="card"><h3>Death Valley safety</h3><p>July can be extreme. Keep the visit short, scenic, and early/late. Carry at least one gallon of water per person per day and avoid hot lower-elevation hikes.</p></div>
+        </div>
       </div>
     </section>
   </div>
-  <footer>WLB · Trip page placeholder</footer>
+  <footer>WLB · California Road Trip · July 10–18 · Planning draft</footer>
 </body>
 </html>
