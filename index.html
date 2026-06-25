@@ -13,9 +13,9 @@
     .hero{padding:44px 0 32px;display:grid;grid-template-columns:1fr;gap:26px}.eyebrow{text-transform:uppercase;letter-spacing:.1em;color:#53677a;font-size:12px;font-weight:950;margin-bottom:14px}h1{font-size:clamp(42px,7vw,76px);line-height:.95;letter-spacing:-.065em;margin:0 0 18px}.hero p{font-size:18px;line-height:1.6;color:#38485a;max-width:760px;margin:0 0 22px}
     .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:900;background:var(--blue);color:#fff;border:1px solid var(--blue)}.button.secondary{background:#fff;color:var(--blue)}
     .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:22px 0 16px}h2{font-size:34px;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);max-width:620px;line-height:1.5;margin:0}
-    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:36px}.card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}.visual{min-height:170px;background:linear-gradient(135deg,#e8f5fb,#fff);padding:18px;border-bottom:1px solid var(--line)}.visualTitle{height:26px;border-radius:999px;background:#0b5a9c;width:110px;margin-bottom:16px}.sandbox .visualTitle{background:#172033}.content{padding:22px}.content h3{font-size:24px;letter-spacing:-.035em;margin:0 0 10px}.content p{line-height:1.55;color:#3a4657;margin:0 0 16px}.features{display:grid;gap:8px;margin:0 0 18px;padding:0;list-style:none}.features li{display:flex;gap:8px;color:#3a4657}.features li:before{content:"•";color:var(--blue);font-weight:950}.sandbox .features li:before{color:#172033}.links{display:flex;gap:10px;flex-wrap:wrap}.text-link{display:inline-flex;align-items:center;text-decoration:none;font-weight:900;color:var(--blue)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-bottom:36px}.card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}.visual{min-height:170px;background:linear-gradient(135deg,#e8f5fb,#fff);padding:18px;border-bottom:1px solid var(--line)}.visualTitle{height:26px;border-radius:999px;background:#0b5a9c;width:110px;margin-bottom:16px}.sandbox .visualTitle{background:#172033}.trip .visualTitle{background:var(--green)}.content{padding:22px}.content h3{font-size:24px;letter-spacing:-.035em;margin:0 0 10px}.content p{line-height:1.55;color:#3a4657;margin:0 0 16px}.features{display:grid;gap:8px;margin:0 0 18px;padding:0;list-style:none}.features li{display:flex;gap:8px;color:#3a4657}.features li:before{content:"•";color:var(--blue);font-weight:950}.sandbox .features li:before{color:#172033}.trip .features li:before{color:var(--green)}.links{display:flex;gap:10px;flex-wrap:wrap}.text-link{display:inline-flex;align-items:center;text-decoration:none;font-weight:900;color:var(--blue)}
     .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{background:#fff;border:1px solid #d9e2eb;border-radius:16px;padding:12px;min-height:64px}.tile strong{display:block;font-size:18px;letter-spacing:-.04em}.tile span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}.postits{display:grid;grid-template-columns:1fr 1fr;gap:10px}.postit{min-height:64px;border:1px solid #172033;background:#fff0a9;box-shadow:4px 4px 0 rgba(20,40,70,.08);padding:10px;transform:rotate(-2deg)}.postit:nth-child(2){background:#dce7cf;transform:rotate(1deg)}.postit:nth-child(3){background:#e8d8ae;transform:rotate(2deg)}.postit:nth-child(4){background:#f6dfa2;transform:rotate(-1deg)}.postit b{display:block;font-size:12px;line-height:1.05}.blank{border:1px dashed #9aa8b8;background:rgba(255,255,255,.72);border-radius:18px;min-height:116px;display:flex;align-items:center;justify-content:center;color:#667386;font-weight:900;text-align:center;padding:16px}
-    footer{padding:24px 0 44px;color:var(--muted);font-size:13px;text-align:center}@media(max-width:1100px){.cards{grid-template-columns:1fr 1fr}}@media(max-width:720px){.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:8px}nav{align-items:flex-start;flex-direction:column}}
+    footer{padding:24px 0 44px;color:var(--muted);font-size:13px;text-align:center}@media(max-width:720px){.section-head{display:block}.section-head p{margin-top:8px}nav{align-items:flex-start;flex-direction:column}}
   </style>
 </head>
 <body>
@@ -27,26 +27,28 @@
         <a href="./self-direction-dashboard.html">Weiye Self-Direction</a>
         <a href="./comhab-theme-board.html">Com Hab Theme Board</a>
         <a href="./sandbox.html">Sand Box</a>
+        <a href="./trip.html">Trip</a>
       </div>
     </nav>
 
     <section class="hero">
       <div>
         <div class="eyebrow">Separate tools, separate purposes</div>
-        <h1>Four pages for Weiye’s planning stack.</h1>
-        <p>This landing page is the table of contents. Use the balance plan, the Self-Direction budget dashboard, the Com Hab theme board, and the Sand Box as separate working tools.</p>
+        <h1>Five pages for the WLB planning stack.</h1>
+        <p>This landing page is the table of contents. Use the balance plan, the Self-Direction budget dashboard, the Com Hab theme board, the Sand Box, and the Trip page as separate working tools.</p>
         <div class="links">
           <a class="button" href="./wei-balance-plan.html">Open Balance</a>
           <a class="button secondary" href="./self-direction-dashboard.html">Open Dashboard</a>
           <a class="button secondary" href="./comhab-theme-board.html">Open Theme Board</a>
           <a class="button secondary" href="./sandbox.html">Open Sand Box</a>
+          <a class="button secondary" href="./trip.html">Open Trip</a>
         </div>
       </div>
     </section>
 
     <div class="section-head">
       <h2>Choose a page</h2>
-      <p>Tab 4 is now a flexible Sand Box for temporary notes, experiments, rough layouts, and future modules before they become permanent pages.</p>
+      <p>Tab 5 is now a clickable Trip page placeholder. It can become the California itinerary page when the travel content is ready.</p>
     </div>
 
     <section class="cards">
@@ -68,6 +70,11 @@
       <article class="card sandbox">
         <div class="visual"><div class="visualTitle"></div><div class="blank">Sand Box<br/>draft space</div></div>
         <div class="content"><h3>Tab 4 — Sand Box</h3><p>A flexible experiment page for rough notes, temporary layouts, and new WLB ideas.</p><ul class="features"><li>Editable quick notes</li><li>Draft modules</li><li>Future dashboard tests</li></ul><div class="links"><a class="button" href="./sandbox.html">Open</a></div></div>
+      </article>
+
+      <article class="card trip">
+        <div class="visual"><div class="visualTitle"></div><div class="tiles"><div class="tile"><span>Trip</span><strong>July</strong></div><div class="tile"><span>Route</span><strong>Loop</strong></div><div class="tile"><span>Plan</span><strong>Draft</strong></div><div class="tile"><span>Status</span><strong>Open</strong></div></div></div>
+        <div class="content"><h3>Tab 5 — Trip</h3><p>A placeholder page for the upcoming trip itinerary and planning module.</p><ul class="features"><li>Clickable landing page tab</li><li>Ready for itinerary content</li><li>Can hold lodging, route, and costs</li></ul><div class="links"><a class="button" href="./trip.html">Open</a></div></div>
       </article>
     </section>
   </div>
