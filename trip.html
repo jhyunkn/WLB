@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WLB — Trip</title>
+  <style>
+    :root{--ink:#172033;--muted:#667386;--line:#d9e2eb;--blue:#0b5a9c;--green:#18724a;--shadow:0 18px 45px rgba(20,40,70,.08)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 10%,rgba(24,114,74,.13),transparent 30%),radial-gradient(circle at 90% 16%,rgba(11,90,156,.10),transparent 28%),linear-gradient(180deg,#edf7fb 0%,#fbfdff 330px,#f6f9fc 100%)}
+    .shell{width:min(1080px,calc(100% - 32px));margin:0 auto}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}.brand{font-weight:950;letter-spacing:-.03em;font-size:18px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);padding:9px 13px;color:var(--muted);font-size:13px;font-weight:800}
+    .hero{padding:64px 0 30px}.eyebrow{text-transform:uppercase;letter-spacing:.1em;color:#53677a;font-size:12px;font-weight:950;margin-bottom:14px}h1{font-size:clamp(46px,8vw,86px);line-height:.95;letter-spacing:-.07em;margin:0 0 18px}.hero p{font-size:18px;line-height:1.6;color:#38485a;max-width:760px;margin:0 0 22px}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:900;background:var(--green);color:#fff;border:1px solid var(--green)}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:28px;margin:18px 0 44px}.panel h2{font-size:30px;letter-spacing:-.04em;margin:0 0 10px}.panel p{color:#3a4657;line-height:1.6;margin:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px}.tile{border:1px solid var(--line);border-radius:18px;background:#fbfdff;padding:16px;min-height:96px}.tile span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}.tile strong{display:block;font-size:22px;letter-spacing:-.04em;margin-top:6px}
+    footer{padding:24px 0 44px;color:var(--muted);font-size:13px;text-align:center}@media(max-width:720px){nav{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav>
+      <div class="brand">WLB · Trip</div>
+      <div class="navlinks">
+        <a href="./index.html">Index</a>
+        <a href="./wei-balance-plan.html">Wei Balance</a>
+        <a href="./self-direction-dashboard.html">Dashboard</a>
+        <a href="./comhab-theme-board.html">Theme Board</a>
+        <a href="./sandbox.html">Sand Box</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="eyebrow">Tab 5 placeholder</div>
+      <h1>Trip page.</h1>
+      <p>This page is ready for the itinerary content. The landing page can now click into this fifth tab, and the detailed trip plan can be added here next.</p>
+      <a class="button" href="./index.html">Back to Index</a>
+    </section>
+
+    <section class="panel">
+      <h2>Ready for direction</h2>
+      <p>Use this page for the route, dates, lodging, daily schedule, cost estimate, maps, images, and notes once the trip content is confirmed.</p>
+      <div class="grid">
+        <div class="tile"><span>Status</span><strong>Placeholder</strong></div>
+        <div class="tile"><span>Type</span><strong>Trip Plan</strong></div>
+        <div class="tile"><span>Content</span><strong>Pending</strong></div>
+        <div class="tile"><span>Next</span><strong>Itinerary</strong></div>
+      </div>
+    </section>
+  </div>
+  <footer>WLB · Trip page placeholder</footer>
+</body>
+</html>
