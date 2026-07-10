@@ -1,77 +1,345 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>完整中文行程 · California Trip Planner</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>加州旅行中文行程 · 2026年7月10日—7月19日</title>
+<meta name="description" content="2026年7月加州旅行的完整中文行程页面，包含每日路线、重点提醒、航班、官方链接与打印版本。">
 <style>
-:root{--paper:#f4ead6;--paper2:#fff8e8;--ink:#21170f;--muted:#6f5c45;--line:#2f2419;--brown:#4a2f1c;--gold:#b47b2a;--green:#355f3b;--red:#8e2f26;--shadow:8px 8px 0 rgba(47,36,25,.16)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;background:radial-gradient(circle at 14% 6%,rgba(180,123,42,.25),transparent 28rem),radial-gradient(circle at 88% 6%,rgba(53,95,59,.14),transparent 30rem),linear-gradient(var(--paper),var(--paper2));background-attachment:fixed}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(47,36,25,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(47,36,25,.035) 1px,transparent 1px);background-size:28px 28px}.shell{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:16px 0 54px}.topbar{position:sticky;top:0;z-index:50;margin-bottom:22px;padding:12px;border:3px solid var(--line);background:rgba(244,234,214,.94);backdrop-filter:blur(14px);display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:var(--shadow)}.brand{font-weight:950;font-size:19px;letter-spacing:-.02em}.nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.btn{appearance:none;border:2px solid var(--line);background:var(--paper2);color:var(--ink);padding:10px 13px;border-radius:999px;text-decoration:none;font-weight:950;font-size:13px;box-shadow:3px 3px 0 rgba(47,36,25,.10);cursor:pointer}.btn.primary{background:var(--ink);color:var(--paper2)}.hero,.panel,.card,.day{border:3px solid var(--line);background:rgba(255,248,232,.88);box-shadow:var(--shadow);border-radius:26px}.hero{padding:28px;margin-bottom:24px;position:relative;overflow:hidden}.hero:after{content:"纽约 → 旧金山 → 优胜美地 → 一号公路 → 洛杉矶";position:absolute;right:-18px;bottom:10px;font-family:Georgia,"Times New Roman",serif;font-size:46px;line-height:.95;color:rgba(47,36,25,.065);transform:rotate(-3deg)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:950;font-size:12px;margin-bottom:14px}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,8vw,94px);letter-spacing:-.075em;line-height:.84;margin:0 0 18px}h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,4vw,54px);letter-spacing:-.055em;line-height:.94;margin:0 0 12px}h3{font-size:22px;letter-spacing:-.03em;margin:0 0 10px}.intro{font-size:18px;line-height:1.75;color:#3d3022;max-width:850px}.route{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}.route .card{padding:18px}.route b{display:block;font-size:21px;margin-bottom:8px}.route p{margin:0;color:#4d3a29;line-height:1.55}.priority{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:18px}.card p,.day p{color:#4d3a29;line-height:1.68;margin:0}.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}a{color:#174d77;font-weight:850}.links a{border:2px solid var(--line);border-radius:999px;background:rgba(255,255,255,.42);padding:8px 10px;text-decoration:none;color:#174d77;font-size:12px;font-weight:950}.sectionHead{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:34px 0 16px}.sectionHead p{margin:0;color:var(--muted);max-width:680px;line-height:1.55}.flightGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.flight{border:3px solid var(--line);background:rgba(255,248,232,.9);box-shadow:var(--shadow);border-radius:26px;padding:20px}.flightCode{font-family:Georgia,"Times New Roman",serif;font-size:39px;letter-spacing:-.06em;line-height:.9;margin-bottom:8px}.flightTime{font-size:18px;font-weight:950;margin-bottom:10px}.days{display:grid;gap:16px}.day{padding:18px;display:grid;grid-template-columns:220px 1fr;gap:18px}.date{font-family:Georgia,"Times New Roman",serif;font-size:30px;letter-spacing:-.055em;line-height:.94}.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.part{border:2px solid rgba(47,36,25,.5);border-radius:18px;padding:12px;background:rgba(255,255,255,.30)}.part b{display:block;text-transform:uppercase;font-size:12px;letter-spacing:.12em;color:var(--muted);margin-bottom:5px}.note{margin-top:12px;border:2px solid rgba(142,47,38,.45);background:#fff0db;border-radius:18px;padding:12px;color:#6a3429;line-height:1.6}.reminders{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:34px}@media(max-width:980px){.topbar,.sectionHead{align-items:flex-start;flex-direction:column}.route,.priority,.flightGrid,.reminders{grid-template-columns:1fr}.day{grid-template-columns:1fr}.parts{grid-template-columns:1fr}.shell{width:min(100% - 18px,1180px)}.topbar{position:relative}h1{font-size:54px}.hero{padding:22px}}@media print{body{background:#fff;color:#000}.topbar,.btn{display:none!important}.shell{width:100%;padding:0}.hero,.panel,.card,.day,.flight{box-shadow:none;border:2px solid #000;background:#fff;break-inside:avoid}.route,.priority,.flightGrid,.reminders{grid-template-columns:1fr 1fr}.parts{grid-template-columns:1fr 1fr 1fr}.links a:after{content:" — " attr(href);font-weight:400;color:#000}}
+:root{--bg:#f4ead9;--paper:#fffaf0;--ink:#261f1a;--muted:#6f6258;--line:#2e261f;--soft:#eadcc8;--gold:#d3a847;--red:#c96f5a;--green:#8ea27e;--blue:#7187ad;--shadow:4px 5px 0 rgba(38,31,26,.16)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,#d6bea0,#c7aa82);color:var(--ink);font-family:"Noto Serif SC","Songti SC","SimSun",Georgia,serif;line-height:1.65}
+a{color:inherit}
+.page{width:min(1480px,100%);margin:0 auto;min-height:100vh;background:var(--bg);border-left:3px solid var(--line);border-right:3px solid var(--line)}
+.top{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:1fr auto;border-top:3px solid var(--line);border-bottom:3px solid var(--line);background:var(--paper)}
+.top a,.top button{padding:15px 22px;border:0;border-right:3px solid var(--line);background:var(--paper);font-weight:900;letter-spacing:.08em;text-decoration:none;cursor:pointer}
+.top button{background:var(--ink);color:#fff;border-right:0}
+.top a:hover,.top button:hover{background:var(--red);color:#fff}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;border-bottom:3px solid var(--line)}
+.heroMain{padding:clamp(28px,6vw,78px);background:linear-gradient(rgba(38,31,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(38,31,26,.04) 1px,transparent 1px);background-size:24px 24px}
+.eyebrow{font-weight:900;color:var(--red);letter-spacing:.16em}
+.hero h1{font-size:clamp(2.5rem,6.4vw,6.6rem);line-height:.98;margin:14px 0 22px;letter-spacing:-.07em}
+.lead{font-size:clamp(1.05rem,1.55vw,1.38rem);max-width:820px;color:#463a31}
+.routePanel{padding:28px;background:var(--soft);border-left:3px solid var(--line)}
+.routeCard{background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:22px}
+.routeCard h2{margin:0 0 14px;font-size:1.5rem}
+.routeList{display:grid;gap:10px}
+.routeItem{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--gold);border:2px solid var(--line);font-weight:900}
+.section{padding:clamp(24px,4vw,56px);border-bottom:3px solid var(--line)}
+.section h2{font-size:clamp(2rem,4vw,4rem);line-height:1;margin:0 0 22px;letter-spacing:-.05em}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.card{background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:20px}
+.span4{grid-column:span 4}
+.span6{grid-column:span 6}
+.span12{grid-column:span 12}
+.tag{display:inline-block;margin:3px 5px 3px 0;padding:4px 8px;border:1px solid var(--line);background:var(--soft);font-size:.78rem;font-weight:900}
+.urgent{background:var(--red);color:#fff}
+.warn{background:var(--gold)}
+.blue{background:var(--blue);color:#fff}
+.muted{color:var(--muted)}
+.timeline{display:grid;gap:18px}
+.day{display:grid;grid-template-columns:150px 1fr;gap:20px;background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:20px}
+.date{font-weight:900;color:var(--red);font-size:1.05rem}
+.city{display:block;color:var(--muted);margin-top:6px}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.slot{background:#f5ecd9;border:1px solid rgba(38,31,26,.28);padding:14px}
+.slot b{display:block;margin-bottom:6px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.links a{display:inline-block;border:1px solid var(--line);background:#fff;padding:6px 10px;text-decoration:none;font-size:.86rem;font-weight:900}
+.note{border-left:6px solid var(--red);padding:14px 16px;background:#fff7e8;margin-top:14px}
+.printOnly{display:none}
+
+@media(max-width:980px){
+  .hero,.top{grid-template-columns:1fr}
+  .routePanel{border-left:0;border-top:3px solid var(--line)}
+  .span4,.span6{grid-column:span 12}
+  .day{grid-template-columns:1fr}
+  .slots{grid-template-columns:1fr}
+  .top a,.top button{border-right:0;border-bottom:3px solid var(--line)}
+}
+
+@media print{
+  body{background:#fff}
+  .top,.routePanel{display:none}
+  .page{border:0}
+  .section{padding:20px;border-bottom:2px solid #000}
+  .card,.day{box-shadow:none;break-inside:avoid}
+  .printOnly{display:block}
+}
 </style>
 </head>
+
 <body>
-<div class="shell">
-<header class="topbar">
-  <div class="brand">完整中文行程</div>
-  <nav class="nav"><a class="btn" href="./trip.html">← 返回 Trip Planner</a><button class="btn primary" onclick="window.print()" type="button">打印中文行程</button></nav>
+<div class="page">
+
+<nav class="top">
+  <a href="./index.html">加州旅行中文行程</a>
+  <button onclick="window.print()">打印中文行程</button>
+</nav>
+
+<header class="hero">
+  <div class="heroMain">
+    <div class="eyebrow">加州旅行 · 2026年7月10日—7月19日</div>
+    <h1>完整中文行程</h1>
+    <p class="lead">这是一份给旅行当天使用的中文行程页。它把航班、城市移动、每日节奏、关键检查事项和官方链接集中在一个页面里，适合出发前确认、路上查看，也适合打印。</p>
+  </div>
+
+  <aside class="routePanel">
+    <div class="routeCard">
+      <h2>路线骨架</h2>
+      <div class="routeList">
+        <div class="routeItem"><span class="num">1</span><div><b>纽约 → 旧金山</b><br><span class="muted">EWR 到 SFO，落地后取车。</span></div></div>
+        <div class="routeItem"><span class="num">2</span><div><b>旧金山 → 优胜美地</b><br><span class="muted">自然景观、山谷、观景点、巨杉。</span></div></div>
+        <div class="routeItem"><span class="num">3</span><div><b>一号公路</b><br><span class="muted">Big Sur、象海豹、Cambria、Solvang、Santa Barbara。</span></div></div>
+        <div class="routeItem"><span class="num">4</span><div><b>洛杉矶 / 圣地亚哥</b><br><span class="muted">Salk Institute、LACMA、城市休整。</span></div></div>
+      </div>
+    </div>
+  </aside>
 </header>
 
-<section class="hero">
-  <div class="eyebrow">加州旅行 · 2026年7月10日—7月19日</div>
-  <h1>完整中文行程</h1>
-  <p class="intro">这是一份给旅行当天使用的中文行程页。它把航班、城市移动、每日节奏、关键检查事项和官方链接集中在一个页面里，适合出发前确认、路上查看，也适合打印。</p>
-</section>
+<section class="section">
+  <h2>出发前重点</h2>
+  <div class="grid">
+    <div class="card span4">
+      <h3>航班</h3>
+      <span class="tag urgent">必须确认</span>
+      <p>出发前24小时办理值机。出门当天再次确认航站楼、登机口、登机时间和延误信息。</p>
+    </div>
 
-<section class="route">
-  <article class="card"><b>1. 纽约 → 旧金山</b><p>EWR 到 SFO，落地后取车。</p></article>
-  <article class="card"><b>2. 旧金山 → 优胜美地</b><p>自然景观、山谷、观景点、巨杉。</p></article>
-  <article class="card"><b>3. 一号公路</b><p>Big Sur、象海豹、Cambria、Solvang、Santa Barbara。</p></article>
-  <article class="card"><b>4. 洛杉矶 / 圣地亚哥</b><p>Salk Institute、LACMA、城市休整。</p></article>
-</section>
+    <div class="card span4">
+      <h3>一号公路状态</h3>
+      <span class="tag urgent">实时路况</span>
+      <p>一号公路会因山体滑坡、维修、天气或事故临时封路。出发前和当天都要查 Caltrans QuickMap。</p>
+      <div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a></div>
+    </div>
 
-<section>
-  <div class="sectionHead"><div><div class="eyebrow">出发前优先级</div><h2>先确认会影响行程成败的事。</h2></div><p>不要把旧攻略当成实时信息。机场、国家公园、一号公路都要看官方页面。</p></div>
-  <div class="priority">
-    <article class="card"><h3>1. 航班</h3><p>出发前24小时办理值机。出门当天再次确认航站楼、登机口、登机时间和延误信息。</p></article>
-    <article class="card"><h3>2. 一号公路状态</h3><p>一号公路会因山体滑坡、维修、天气或事故临时封路。出发前和当天都要查 Caltrans QuickMap.</p><div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路封路状态</a></div></article>
-    <article class="card"><h3>3. 优胜美地</h3><p>查看国家公园官网的入园、道路、停车、天气和步道状态。不要只依赖旧攻略。</p><div class="links"><a href="https://www.nps.gov/yose/planyourvisit/conditions.htm" target="_blank" rel="noopener">优胜美地实时公告</a></div></article>
+    <div class="card span4">
+      <h3>优胜美地</h3>
+      <span class="tag warn">官方规则</span>
+      <p>查看国家公园官网的入园、道路、停车、天气和步道状态。不要只依赖旧攻略。</p>
+      <div class="links"><a href="https://www.nps.gov/yose/planyourvisit/conditions.htm" target="_blank">优胜美地实时公告</a></div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="sectionHead"><div><div class="eyebrow">航班</div><h2>去程与返程。</h2></div></div>
-  <div class="flightGrid">
-    <article class="flight"><div class="flightCode">去程</div><div class="flightTime">7月10日 星期五<br>UA1777 · EWR 08:00 → SFO 11:30</div><p>抵达旧金山后取车。当天不要把旧金山市区安排得太满，因为晚上还要开车去优胜美地。</p><div class="links"><a href="https://www.united.com/" target="_blank" rel="noopener">United</a><a href="https://www.newarkairport.com/" target="_blank" rel="noopener">EWR</a><a href="https://www.flysfo.com/" target="_blank" rel="noopener">SFO</a></div></article>
-    <article class="flight"><div class="flightCode">返程</div><div class="flightTime">7月18日 星期六<br>B6 1524 · LAX 22:25 → JFK 07:00</div><p>红眼航班前把充电器、耳机、眼镜、护肤、药品、外套和登机牌放在随身包最容易拿的位置。</p><div class="links"><a href="https://www.jetblue.com/" target="_blank" rel="noopener">JetBlue</a><a href="https://www.flylax.com/" target="_blank" rel="noopener">LAX</a><a href="https://www.jfkairport.com/" target="_blank" rel="noopener">JFK</a></div></article>
+<section class="section">
+  <h2>航班信息</h2>
+  <div class="grid">
+    <div class="card span6">
+      <h3>去程 · 7月10日 星期五</h3>
+      <p><b>UA1777</b> · EWR 08:00 → SFO 11:30</p>
+      <p>抵达旧金山后取车。当天不要把旧金山市区安排得太满，因为晚上还要开车去优胜美地。</p>
+      <div class="links">
+        <a href="https://www.united.com/" target="_blank">United 官方</a>
+        <a href="https://www.newarkairport.com/" target="_blank">EWR 官方</a>
+        <a href="https://www.flysfo.com/" target="_blank">SFO 官方</a>
+      </div>
+    </div>
+
+    <div class="card span6">
+      <h3>返程 · 7月18日 星期六</h3>
+      <p><b>B6 1524</b> · LAX 22:25 → JFK 07:00</p>
+      <p>红眼航班前把充电器、耳机、眼镜、护肤、药品、外套和登机牌放在随身包最容易拿的位置。</p>
+      <div class="links">
+        <a href="https://www.jetblue.com/" target="_blank">JetBlue 官方</a>
+        <a href="https://www.flylax.com/" target="_blank">LAX 官方</a>
+        <a href="https://www.jfkairport.com/" target="_blank">JFK 官方</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="sectionHead"><div><div class="eyebrow">每日行程</div><h2>按天使用的旅行节奏。</h2></div><p>每天只抓最重要的结构，不要为了多打卡牺牲体验质量。</p></div>
-  <div class="days">
-    <article class="day"><div><div class="date">7月10日 周五<br>纽约 → 旧金山 → 优胜美地</div><div class="links"><a href="https://www.united.com/" target="_blank" rel="noopener">United</a><a href="https://www.flysfo.com/" target="_blank" rel="noopener">SFO</a><a href="https://www.famsf.org/visit/de-young" target="_blank" rel="noopener">de Young</a><a href="https://www.nps.gov/yose/index.htm" target="_blank" rel="noopener">Yosemite</a></div></div><div><div class="parts"><div class="part"><b>上午</b>从 EWR 搭乘 UA1777 前往 SFO。抵达后取车，检查手机电量、导航和车内充电线。</div><div class="part"><b>下午</b>轻量探索旧金山。可根据体力选择 de Young Museum、Golden Gate 附近，顺路购买路上食物。</div><div class="part"><b>晚上</b>约下午4点左右开往优胜美地，预计约4小时。不要拖到太晚出发。</div></div></div></article>
-    <article class="day"><div><div class="date">7月11日 周六<br>优胜美地</div><div class="links"><a href="https://www.nps.gov/yose/planyourvisit/conditions.htm" target="_blank" rel="noopener">实时公告</a><a href="https://www.nps.gov/yose/planyourvisit/glacierpoint.htm" target="_blank" rel="noopener">Glacier Point</a><a href="https://www.nps.gov/yose/planyourvisit/mg.htm" target="_blank" rel="noopener">Mariposa Grove</a></div></div><div><div class="parts"><div class="part"><b>上午</b>早起进入主要景点。根据道路与停车情况选择 Glacier Point、Curry Village、Lower Yosemite Fall、Tunnel View。</div><div class="part"><b>下午</b>继续徒步或前往 Mariposa Grove。若停车和时间不理想，宁可减少点位，保留体验质量。</div><div class="part"><b>晚上</b>日落前开回旧金山方向。山路和疲劳驾驶要谨慎。</div></div><div class="note"><b>Note:</b> Horsetail Fall 的著名“火瀑布”通常是冬季特定光线现象，7月不要把它作为主要期待。</div></div></article>
-    <article class="day"><div><div class="date">7月12日 周日<br>旧金山</div><div class="links"><a href="https://www.sftravel.com/" target="_blank" rel="noopener">SF Travel</a><a href="https://www.famsf.org/visit/de-young" target="_blank" rel="noopener">de Young</a></div></div><div class="parts"><div class="part"><b>上午</b>从优胜美地长途移动后，安排较慢节奏的恢复型早晨。</div><div class="part"><b>下午</b>旧金山市区探索：博物馆、公园、海边、街区散步。</div><div class="part"><b>晚上</b>吃饭、洗衣、整理行李，为一号公路段重新打包。</div></div></article>
-    <article class="day"><div><div class="date">7月13日 周一<br>旧金山</div><div class="links"><a href="https://www.sftravel.com/" target="_blank" rel="noopener">SF Travel</a><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路状态</a></div></div><div class="parts"><div class="part"><b>上午</b>早起，买咖啡，检查车辆、油量、水、零食、充电器。</div><div class="part"><b>下午</b>最后半天旧金山探索，避免安排太分散。</div><div class="part"><b>晚上</b>确认退房、酒店、路线、一号公路状态和第二天出发时间。</div></div></article>
-    <article class="day"><div><div class="date">7月14日 周二<br>旧金山 → 一号公路 → Big Sur / Cambria</div><div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路状态</a><a href="https://www.bigsurcalifornia.org/" target="_blank" rel="noopener">Big Sur</a><a href="https://elephantseal.org/" target="_blank" rel="noopener">象海豹</a><a href="https://visitcambriaca.com/" target="_blank" rel="noopener">Cambria</a></div></div><div class="parts"><div class="part"><b>上午</b>加满油，下载离线地图、播放列表和播客。离开旧金山南下。</div><div class="part"><b>下午</b>一号公路核心段：Bixby Bridge、Big Sur 沿线。实时确认封路，不要盲目开到断点。</div><div class="part"><b>晚上</b>象海豹观景点、Cambria、日落。夜间沿海公路不要疲劳驾驶。</div></div></article>
-    <article class="day"><div><div class="date">7月15日 周三<br>Cambria → Solvang → Santa Barbara → LA</div><div class="links"><a href="https://www.solvangusa.com/" target="_blank" rel="noopener">Solvang</a><a href="https://santabarbaraca.com/" target="_blank" rel="noopener">Santa Barbara</a><a href="https://www.discoverlosangeles.com/" target="_blank" rel="noopener">LA</a></div></div><div class="parts"><div class="part"><b>上午</b>从 Cambria 出发，沿海岸继续南下。根据路况决定停留密度。</div><div class="part"><b>下午</b>Solvang 和 Santa Barbara。一个偏小镇记忆，一个偏海岸城市节奏。</div><div class="part"><b>晚上</b>抵达洛杉矶。不要把当天塞得太满，避免到 LA 时过累。</div></div></article>
-    <article class="day"><div><div class="date">7月16日 周四<br>洛杉矶 → 圣地亚哥 → 洛杉矶</div><div class="links"><a href="https://www.salk.edu/" target="_blank" rel="noopener">Salk Institute</a><a href="https://www.sandiego.org/" target="_blank" rel="noopener">San Diego</a></div></div><div class="parts"><div class="part"><b>上午</b>Salk Institute 10:00 tour。需要很早从 LA 出发，预留交通时间。</div><div class="part"><b>下午</b>圣地亚哥轻量探索。不要安排太多需要预约的点。</div><div class="part"><b>晚上</b>返回 LA 或视体力调整。当天重点是 Salk，不是把 San Diego 全部看完。</div></div></article>
-    <article class="day"><div><div class="date">7月17日 周五<br>洛杉矶</div><div class="links"><a href="https://www.discoverlosangeles.com/" target="_blank" rel="noopener">LA Tourism</a></div></div><div class="parts"><div class="part"><b>上午</b>开放型 LA 日程。根据天气、交通和体力选择建筑、海边或街区。</div><div class="part"><b>下午</b>可以安排较有记忆点的空间体验、餐厅或城市观察。</div><div class="part"><b>晚上</b>保持轻松，为最后一天和红眼航班保留体力。</div></div></article>
-    <article class="day"><div><div class="date">7月18日 周六<br>洛杉矶 → 纽约</div><div class="links"><a href="https://www.lacma.org/" target="_blank" rel="noopener">LACMA</a><a href="https://www.jetblue.com/" target="_blank" rel="noopener">JetBlue</a><a href="https://www.flylax.com/" target="_blank" rel="noopener">LAX</a></div></div><div class="parts"><div class="part"><b>上午</b>LA 自由活动。开始整理行李，不要把所有整理留到晚上。</div><div class="part"><b>下午</b>LACMA。确认展览、停车、闭馆时间和票务。</div><div class="part"><b>晚上</b>前往 LAX，搭乘 22:25 JetBlue B6 1524 红眼航班去 JFK。</div></div></article>
-    <article class="day"><div><div class="date">7月19日 周日<br>纽约</div><div class="links"><a href="https://www.jfkairport.com/" target="_blank" rel="noopener">JFK</a></div></div><div class="parts"><div class="part"><b>上午</b>约 07:00 抵达 JFK。先处理交通和恢复。</div><div class="part"><b>下午</b>洗衣、整理票据、照片备份、检查遗失物品。</div><div class="part"><b>晚上</b>为回到工作状态做低强度恢复。</div></div></article>
+<section class="section">
+  <h2>每日中文行程</h2>
+  <div class="timeline">
+
+    <article class="day">
+      <div class="date">7月10日 周五<span class="city">纽约 → 旧金山 → 优胜美地</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>从 EWR 搭乘 UA1777 前往 SFO。抵达后取车，检查手机电量、导航和车内充电线。</div>
+          <div class="slot"><b>下午</b>轻量探索旧金山。可根据体力选择 de Young Museum、Golden Gate 附近，顺路购买路上食物。</div>
+          <div class="slot"><b>晚上</b>约下午4点左右开往优胜美地，预计约4小时。不要拖到太晚出发。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.famsf.org/visit/de-young" target="_blank">de Young</a>
+          <a href="https://www.parksconservancy.org/parks/golden-gate-bridge" target="_blank">金门大桥</a>
+          <a href="https://www.nps.gov/yose/index.htm" target="_blank">优胜美地官网</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月11日 周六<span class="city">优胜美地</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>早起进入主要景点。根据道路与停车情况选择 Glacier Point、Curry Village、Lower Yosemite Fall、Tunnel View。</div>
+          <div class="slot"><b>下午</b>继续徒步或前往 Mariposa Grove。若停车和时间不理想，宁可减少点位，保留体验质量。</div>
+          <div class="slot"><b>晚上</b>日落前开回旧金山方向。山路和疲劳驾驶要谨慎。</div>
+        </div>
+        <div class="note">Horsetail Fall 的著名“火瀑布”通常是冬季特定光线现象，7月不要把它作为主要期待。</div>
+        <div class="links">
+          <a href="https://www.nps.gov/yose/planyourvisit/glacierpoint.htm" target="_blank">Glacier Point</a>
+          <a href="https://www.nps.gov/yose/planyourvisit/mg.htm" target="_blank">Mariposa Grove</a>
+          <a href="https://www.nps.gov/yose/planyourvisit/loweryosemitefalltrail.htm" target="_blank">Lower Yosemite Fall</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月12日 周日<span class="city">旧金山</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>从优胜美地长途移动后，安排较慢节奏的恢复型早晨。</div>
+          <div class="slot"><b>下午</b>旧金山市区探索：博物馆、公园、海边、街区散步。</div>
+          <div class="slot"><b>晚上</b>吃饭、洗衣、整理行李，为一号公路段重新打包。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.sftravel.com/" target="_blank">旧金山旅游官网</a>
+          <a href="https://sfrecpark.org/770/Golden-Gate-Park" target="_blank">Golden Gate Park</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月13日 周一<span class="city">旧金山</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>早起，买咖啡，检查车辆、油量、水、零食、充电器。</div>
+          <div class="slot"><b>下午</b>最后半天旧金山探索，避免安排太分散。</div>
+          <div class="slot"><b>晚上</b>确认退房、酒店、路线、一号公路状态和第二天出发时间。</div>
+        </div>
+        <div class="links">
+          <a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a>
+          <a href="https://www.sftravel.com/" target="_blank">旧金山旅游官网</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月14日 周二<span class="city">旧金山 → 一号公路 → Big Sur / Cambria</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>加满油，下载离线地图、播放列表和播客。离开旧金山南下。</div>
+          <div class="slot"><b>下午</b>一号公路核心段：Bixby Bridge、Big Sur 沿线。实时确认封路，不要盲目开到断点。</div>
+          <div class="slot"><b>晚上</b>象海豹观景点、Cambria、日落。夜间沿海公路不要疲劳驾驶。</div>
+        </div>
+        <div class="links">
+          <a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a>
+          <a href="https://www.bigsurcalifornia.org/" target="_blank">Big Sur</a>
+          <a href="https://elephantseal.org/" target="_blank">象海豹观景点</a>
+          <a href="https://visitcambriaca.com/" target="_blank">Cambria</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月15日 周三<span class="city">Cambria → Solvang → Santa Barbara → LA</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>从 Cambria 出发，沿海岸继续南下。根据路况决定停留密度。</div>
+          <div class="slot"><b>下午</b>Solvang 和 Santa Barbara。一个偏小镇记忆，一个偏海岸城市节奏。</div>
+          <div class="slot"><b>晚上</b>抵达洛杉矶。不要把当天塞得太满，避免到 LA 时过累。</div>
+        </div>
+        <div class="links">
+          <a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a>
+          <a href="https://www.solvangusa.com/" target="_blank">Solvang</a>
+          <a href="https://santabarbaraca.com/" target="_blank">Santa Barbara</a>
+          <a href="https://www.discoverlosangeles.com/" target="_blank">洛杉矶旅游官网</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月16日 周四<span class="city">洛杉矶 → 圣地亚哥 → 洛杉矶</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>Salk Institute 10:00 tour。需要很早从 LA 出发，预留交通时间。</div>
+          <div class="slot"><b>下午</b>圣地亚哥轻量探索。不要安排太多需要预约的点。</div>
+          <div class="slot"><b>晚上</b>返回 LA 或视体力调整。当天重点是 Salk，不是把 San Diego 全部看完。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.salk.edu/" target="_blank">Salk Institute</a>
+          <a href="https://www.salk.edu/about/history-of-salk/" target="_blank">Salk 历史</a>
+          <a href="https://www.sandiego.org/" target="_blank">圣地亚哥旅游官网</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月17日 周五<span class="city">洛杉矶</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>开放型 LA 日程。根据天气、交通和体力选择建筑、海边或街区。</div>
+          <div class="slot"><b>下午</b>可以安排较有记忆点的空间体验、餐厅或城市观察。</div>
+          <div class="slot"><b>晚上</b>保持轻松，为最后一天和红眼航班保留体力。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.discoverlosangeles.com/" target="_blank">洛杉矶旅游官网</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月18日 周六<span class="city">洛杉矶 → 纽约</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>LA 自由活动。开始整理行李，不要把所有整理留到晚上。</div>
+          <div class="slot"><b>下午</b>LACMA。确认展览、停车、闭馆时间和票务。</div>
+          <div class="slot"><b>晚上</b>前往 LAX，搭乘 22:25 JetBlue B6 1524 红眼航班去 JFK。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.lacma.org/" target="_blank">LACMA</a>
+          <a href="https://www.flylax.com/" target="_blank">LAX 官方</a>
+          <a href="https://www.jetblue.com/" target="_blank">JetBlue</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="day">
+      <div class="date">7月19日 周日<span class="city">纽约</span></div>
+      <div>
+        <div class="slots">
+          <div class="slot"><b>上午</b>约 07:00 抵达 JFK。先处理交通和恢复。</div>
+          <div class="slot"><b>下午</b>洗衣、整理票据、照片备份、检查遗失物品。</div>
+          <div class="slot"><b>晚上</b>为回到工作状态做低强度恢复。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.jfkairport.com/" target="_blank">JFK 官方</a>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
-<section>
-  <div class="sectionHead"><div><div class="eyebrow">提醒</div><h2>每天重复的小系统。</h2></div></div>
-  <div class="reminders">
-    <article class="card"><h3>1. 每天早上</h3><p>确认天气、路线、停车、门票、油量、电量、当天最重要的一件事。</p></article>
-    <article class="card"><h3>2. 每天晚上</h3><p>充电、下载地图、整理衣物、检查第二天开车时间和预约时间。</p></article>
-    <article class="card"><h3>3. 路上原则</h3><p>不要为了多打卡牺牲体验质量。加州这条线的价值在移动中的风景、节奏和记忆。</p></article>
+<section class="section">
+  <h2>中文提醒清单</h2>
+  <div class="grid">
+    <div class="card span4">
+      <h3>每天早上</h3>
+      <p>确认天气、路线、停车、门票、油量、电量、当天最重要的一件事。</p>
+    </div>
+
+    <div class="card span4">
+      <h3>每天晚上</h3>
+      <p>充电、下载地图、整理衣物、检查第二天开车时间和预约时间。</p>
+    </div>
+
+    <div class="card span4">
+      <h3>路上原则</h3>
+      <p>不要为了多打卡牺牲体验质量。加州这条线的价值在移动中的风景、节奏和记忆。</p>
+    </div>
   </div>
 </section>
 
-<div class="footer">California Trip Planner · 中文行程页 · 纯静态 HTML/CSS</div>
+<section class="section printOnly">
+  <h2>打印版备注</h2>
+  <p>建议打印：中文行程、护照复印件、航班、酒店、租车、门票、优胜美地规则、一号公路状态查询链接、紧急联系人。</p>
+</section>
+
 </div>
 </body>
 </html>
