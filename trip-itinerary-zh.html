@@ -4,167 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>加州旅行中文行程 · 2026年7月10日—7月19日</title>
-<meta name="description" content="2026年7月加州旅行的完整中文行程页面，包含每日路线、住宿、重点提醒、航班、官方链接与打印版本。">
+<meta name="description" content="2026年7月加州旅行的完整中文行程页面，包含每日路线、住宿、Google Maps 导航、重点提醒、航班、官方链接与打印版本。">
 <style>
 :root{--bg:#f4ead9;--paper:#fffaf0;--ink:#261f1a;--muted:#6f6258;--line:#2e261f;--soft:#eadcc8;--gold:#d3a847;--red:#c96f5a;--green:#8ea27e;--blue:#7187ad;--shadow:4px 5px 0 rgba(38,31,26,.16)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:linear-gradient(135deg,#d6bea0,#c7aa82);color:var(--ink);font-family:"Noto Serif SC","Songti SC","SimSun",Georgia,serif;line-height:1.65}
-a{color:inherit}
-.page{width:min(1480px,100%);margin:0 auto;min-height:100vh;background:var(--bg);border-left:3px solid var(--line);border-right:3px solid var(--line)}
+a{color:inherit}.page{width:min(1480px,100%);margin:0 auto;min-height:100vh;background:var(--bg);border-left:3px solid var(--line);border-right:3px solid var(--line)}
 .top{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:1fr auto;border-top:3px solid var(--line);border-bottom:3px solid var(--line);background:var(--paper)}
-.top a,.top button{padding:15px 22px;border:0;border-right:3px solid var(--line);background:var(--paper);font-weight:900;letter-spacing:.08em;text-decoration:none;cursor:pointer}
-.top button{background:var(--ink);color:#fff;border-right:0}
-.top a:hover,.top button:hover{background:var(--red);color:#fff}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;border-bottom:3px solid var(--line)}
-.heroMain{padding:clamp(28px,6vw,78px);background:linear-gradient(rgba(38,31,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(38,31,26,.04) 1px,transparent 1px);background-size:24px 24px}
-.eyebrow{font-weight:900;color:var(--red);letter-spacing:.16em}
-.hero h1{font-size:clamp(2.5rem,6.4vw,6.6rem);line-height:.98;margin:14px 0 22px;letter-spacing:-.07em}
-.lead{font-size:clamp(1.05rem,1.55vw,1.38rem);max-width:820px;color:#463a31}
-.routePanel{padding:28px;background:var(--soft);border-left:3px solid var(--line)}
-.routeCard{background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:22px}
-.routeCard h2{margin:0 0 14px;font-size:1.5rem}
-.routeList{display:grid;gap:10px}
-.routeItem{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
-.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--gold);border:2px solid var(--line);font-weight:900}
-.section{padding:clamp(24px,4vw,56px);border-bottom:3px solid var(--line)}
-.section h2{font-size:clamp(2rem,4vw,4rem);line-height:1;margin:0 0 22px;letter-spacing:-.05em}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.card{background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:20px}
-.span3{grid-column:span 3}
-.span4{grid-column:span 4}
-.span6{grid-column:span 6}
-.span12{grid-column:span 12}
-.tag{display:inline-block;margin:3px 5px 3px 0;padding:4px 8px;border:1px solid var(--line);background:var(--soft);font-size:.78rem;font-weight:900}
-.urgent{background:var(--red);color:#fff}
-.warn{background:var(--gold)}
-.blue{background:var(--blue);color:#fff}
-.green{background:var(--green);color:#fff}
-.muted{color:var(--muted)}
-.timeline{display:grid;gap:18px}
-.day{display:grid;grid-template-columns:150px 1fr;gap:20px;background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:20px}
-.date{font-weight:900;color:var(--red);font-size:1.05rem}
-.city{display:block;color:var(--muted);margin-top:6px}
-.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.slot{background:#f5ecd9;border:1px solid rgba(38,31,26,.28);padding:14px}
-.slot b{display:block;margin-bottom:6px}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.links a{display:inline-block;border:1px solid var(--line);background:#fff;padding:6px 10px;text-decoration:none;font-size:.86rem;font-weight:900}
-.note{border-left:6px solid var(--red);padding:14px 16px;background:#fff7e8;margin-top:14px}
-.printOnly{display:none}
-
-@media(max-width:980px){
-  .hero,.top{grid-template-columns:1fr}
-  .routePanel{border-left:0;border-top:3px solid var(--line)}
-  .span3,.span4,.span6{grid-column:span 12}
-  .day{grid-template-columns:1fr}
-  .slots{grid-template-columns:1fr}
-  .top a,.top button{border-right:0;border-bottom:3px solid var(--line)}
-}
-
-@media print{
-  body{background:#fff}
-  .top,.routePanel{display:none}
-  .page{border:0}
-  .section{padding:20px;border-bottom:2px solid #000}
-  .card,.day{box-shadow:none;break-inside:avoid}
-  .printOnly{display:block}
-}
+.top a,.top button{padding:15px 22px;border:0;border-right:3px solid var(--line);background:var(--paper);font-weight:900;letter-spacing:.08em;text-decoration:none;cursor:pointer}.top button{background:var(--ink);color:#fff;border-right:0}.top a:hover,.top button:hover{background:var(--red);color:#fff}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;border-bottom:3px solid var(--line)}.heroMain{padding:clamp(28px,6vw,78px);background:linear-gradient(rgba(38,31,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(38,31,26,.04) 1px,transparent 1px);background-size:24px 24px}.eyebrow{font-weight:900;color:var(--red);letter-spacing:.16em}.hero h1{font-size:clamp(2.5rem,6.4vw,6.6rem);line-height:.98;margin:14px 0 22px;letter-spacing:-.07em}.lead{font-size:clamp(1.05rem,1.55vw,1.38rem);max-width:820px;color:#463a31}
+.routePanel{padding:28px;background:var(--soft);border-left:3px solid var(--line)}.routeCard{background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:22px}.routeCard h2{margin:0 0 14px;font-size:1.5rem}.routeList{display:grid;gap:10px}.routeItem{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--gold);border:2px solid var(--line);font-weight:900}
+.section{padding:clamp(24px,4vw,56px);border-bottom:3px solid var(--line)}.section h2{font-size:clamp(2rem,4vw,4rem);line-height:1;margin:0 0 22px;letter-spacing:-.05em}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:20px}.span3{grid-column:span 3}.span4{grid-column:span 4}.span6{grid-column:span 6}.span12{grid-column:span 12}.tag{display:inline-block;margin:3px 5px 3px 0;padding:4px 8px;border:1px solid var(--line);background:var(--soft);font-size:.78rem;font-weight:900}.urgent{background:var(--red);color:#fff}.warn{background:var(--gold)}.blue{background:var(--blue);color:#fff}.green{background:var(--green);color:#fff}.muted{color:var(--muted)}
+.timeline{display:grid;gap:18px}.day{display:grid;grid-template-columns:150px 1fr;gap:20px;background:var(--paper);border:2px solid var(--line);box-shadow:var(--shadow);padding:20px}.date{font-weight:900;color:var(--red);font-size:1.05rem}.city{display:block;color:var(--muted);margin-top:6px}.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.slot{background:#f5ecd9;border:1px solid rgba(38,31,26,.28);padding:14px}.slot b{display:block;margin-bottom:6px}.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.links a,.mapBtn{display:inline-block;border:1px solid var(--line);background:#fff;padding:6px 10px;text-decoration:none;font-size:.86rem;font-weight:900}.mapBtn{background:var(--ink);color:#fff}.mapBtn:hover{background:var(--red)}.note{border-left:6px solid var(--red);padding:14px 16px;background:#fff7e8;margin-top:14px}.lodging{margin-top:14px;padding:14px 16px;background:#fff;border:2px dashed var(--line)}.lodging b{display:block}.lodging p{margin:.35rem 0 .6rem}.printOnly{display:none}
+@media(max-width:980px){.hero,.top{grid-template-columns:1fr}.routePanel{border-left:0;border-top:3px solid var(--line)}.span3,.span4,.span6{grid-column:span 12}.day{grid-template-columns:1fr}.slots{grid-template-columns:1fr}.top a,.top button{border-right:0;border-bottom:3px solid var(--line)}}
+@media print{body{background:#fff}.top,.routePanel{display:none}.page{border:0}.section{padding:20px;border-bottom:2px solid #000}.card,.day{box-shadow:none;break-inside:avoid}.printOnly{display:block}.mapBtn::after{content:" — " attr(href);font-weight:400;color:#000}.mapBtn{background:#fff;color:#000}}
 </style>
 </head>
-
 <body>
 <div class="page">
-
-<nav class="top">
-  <a href="./index.html">加州旅行中文行程</a>
-  <button onclick="window.print()">打印中文行程</button>
-</nav>
-
+<nav class="top"><a href="./index.html">加州旅行中文行程</a><button onclick="window.print()">打印中文行程</button></nav>
 <header class="hero">
-  <div class="heroMain">
-    <div class="eyebrow">加州旅行 · 2026年7月10日—7月19日</div>
-    <h1>完整中文行程</h1>
-    <p class="lead">这是一份给旅行当天使用的中文行程页。它把航班、城市移动、每日节奏、关键检查事项和官方链接集中在一个页面里，适合出发前确认、路上查看，也适合打印。</p>
-  </div>
-
-  <aside class="routePanel">
-    <div class="routeCard">
-      <h2>路线骨架</h2>
-      <div class="routeList">
-        <div class="routeItem"><span class="num">1</span><div><b>纽约 → 旧金山</b><br><span class="muted">EWR 到 SFO，落地后取车。</span></div></div>
-        <div class="routeItem"><span class="num">2</span><div><b>旧金山 → 优胜美地</b><br><span class="muted">自然景观、山谷、观景点、巨杉。</span></div></div>
-        <div class="routeItem"><span class="num">3</span><div><b>一号公路</b><br><span class="muted">Big Sur、象海豹、Cambria、Solvang、Santa Barbara。</span></div></div>
-        <div class="routeItem"><span class="num">4</span><div><b>洛杉矶 / 圣地亚哥</b><br><span class="muted">Salk Institute、LACMA、城市休整。</span></div></div>
-      </div>
-    </div>
-  </aside>
+  <div class="heroMain"><div class="eyebrow">加州旅行 · 2026年7月10日—7月19日</div><h1>完整中文行程</h1><p class="lead">这是一份给旅行当天使用的中文行程页。它把航班、城市移动、每日节奏、住宿地址、Google Maps 导航、关键检查事项和官方链接集中在一个页面里，适合出发前确认、路上查看，也适合打印。</p></div>
+  <aside class="routePanel"><div class="routeCard"><h2>路线骨架</h2><div class="routeList">
+    <div class="routeItem"><span class="num">1</span><div><b>纽约 → 旧金山</b><br><span class="muted">EWR 到 SFO，落地后取车。</span></div></div>
+    <div class="routeItem"><span class="num">2</span><div><b>旧金山 → 优胜美地</b><br><span class="muted">自然景观、山谷、观景点、巨杉。</span></div></div>
+    <div class="routeItem"><span class="num">3</span><div><b>一号公路</b><br><span class="muted">Monterey、Big Sur、Cambria、Solvang、Santa Barbara。</span></div></div>
+    <div class="routeItem"><span class="num">4</span><div><b>洛杉矶 / 圣地亚哥</b><br><span class="muted">Salk Institute、LACMA、城市休整。</span></div></div>
+  </div></div></aside>
 </header>
 
 <section class="section">
   <h2>出发前重点</h2>
   <div class="grid">
-    <div class="card span4">
-      <h3>航班</h3>
-      <span class="tag urgent">必须确认</span>
-      <p>出发前24小时办理值机。出门当天再次确认航站楼、登机口、登机时间和延误信息。</p>
-    </div>
-
-    <div class="card span4">
-      <h3>一号公路状态</h3>
-      <span class="tag urgent">实时路况</span>
-      <p>一号公路会因山体滑坡、维修、天气或事故临时封路。出发前和当天都要查 Caltrans QuickMap。</p>
-      <div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a></div>
-    </div>
-
-    <div class="card span4">
-      <h3>优胜美地</h3>
-      <span class="tag warn">官方规则</span>
-      <p>查看国家公园官网的入园、道路、停车、天气和步道状态。不要只依赖旧攻略。</p>
-      <div class="links"><a href="https://www.nps.gov/yose/planyourvisit/conditions.htm" target="_blank">优胜美地实时公告</a></div>
-    </div>
+    <div class="card span4"><h3>航班</h3><span class="tag urgent">必须确认</span><p>出发前24小时办理值机。出门当天再次确认航站楼、登机口、登机时间和延误信息。</p></div>
+    <div class="card span4"><h3>一号公路状态</h3><span class="tag urgent">实时路况</span><p>一号公路会因山体滑坡、维修、天气或事故临时封路。出发前和当天都要查 Caltrans QuickMap。</p><div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路封路状态</a></div></div>
+    <div class="card span4"><h3>优胜美地</h3><span class="tag warn">官方规则</span><p>查看国家公园官网的入园、道路、停车、天气和步道状态。不要只依赖旧攻略。</p><div class="links"><a href="https://www.nps.gov/yose/planyourvisit/conditions.htm" target="_blank" rel="noopener">优胜美地实时公告</a></div></div>
   </div>
 </section>
 
 <section class="section">
   <h2>航班信息</h2>
   <div class="grid">
-    <div class="card span6">
-      <h3>去程 · 7月10日 星期五</h3>
-      <p><b>UA1777</b> · EWR 08:00 → SFO 11:30</p>
-      <p>抵达旧金山后取车。当天不要把旧金山市区安排得太满，因为晚上还要开车去优胜美地。</p>
-      <div class="links">
-        <a href="https://www.united.com/" target="_blank">United 官方</a>
-        <a href="https://www.newarkairport.com/" target="_blank">EWR 官方</a>
-        <a href="https://www.flysfo.com/" target="_blank">SFO 官方</a>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <h3>返程 · 7月18日 星期六</h3>
-      <p><b>B6 1524</b> · LAX 22:25 → JFK 07:00</p>
-      <p>红眼航班前把充电器、耳机、眼镜、护肤、药品、外套和登机牌放在随身包最容易拿的位置。</p>
-      <div class="links">
-        <a href="https://www.jetblue.com/" target="_blank">JetBlue 官方</a>
-        <a href="https://www.flylax.com/" target="_blank">LAX 官方</a>
-        <a href="https://www.jfkairport.com/" target="_blank">JFK 官方</a>
-      </div>
-    </div>
+    <div class="card span6"><h3>去程 · 7月10日 星期五</h3><p><b>UA1777</b> · EWR 08:00 → SFO 11:30</p><p>抵达旧金山后取车。当天不要把旧金山市区安排得太满，因为晚上还要开车去优胜美地。</p><div class="links"><a href="https://www.united.com/" target="_blank" rel="noopener">United 官方</a><a href="https://www.newarkairport.com/" target="_blank" rel="noopener">EWR 官方</a><a href="https://www.flysfo.com/" target="_blank" rel="noopener">SFO 官方</a></div></div>
+    <div class="card span6"><h3>返程 · 7月18日 星期六</h3><p><b>B6 1524</b> · LAX 22:25 → JFK 07:00</p><p>红眼航班前把充电器、耳机、眼镜、护肤、药品、外套和登机牌放在随身包最容易拿的位置。</p><div class="links"><a href="https://www.jetblue.com/" target="_blank" rel="noopener">JetBlue 官方</a><a href="https://www.flylax.com/" target="_blank" rel="noopener">LAX 官方</a><a href="https://www.jfkairport.com/" target="_blank" rel="noopener">JFK 官方</a></div></div>
   </div>
 </section>
 
 <section class="section">
-  <h2>住宿信息</h2>
+  <h2>住宿速查</h2>
   <div class="grid">
-    <div class="card span3"><h3>7月10日 周五</h3><span class="tag green">已确认</span><p><b>Yosemite Priest Station Cafe & Cabin</b></p></div>
-    <div class="card span3"><h3>7月11日 周六</h3><p><b>Royal Pacific Motor Inn</b><br><span class="muted">661 Broadway, San Francisco, CA</span></p></div>
-    <div class="card span3"><h3>7月12日 周日</h3><p><b>Royal Pacific Motor Inn</b><br><span class="muted">661 Broadway, San Francisco, CA</span></p></div>
-    <div class="card span3"><h3>7月13日 周一</h3><p><b>Portola Hotel</b><br><span class="muted">Two Portola Plaza, Monterey, CA 93940</span></p></div>
-    <div class="card span3"><h3>7月14日 周二</h3><p><b>San Franciscan Inn and Suites</b><br><span class="muted">109 Bath Street, Santa Barbara, CA 93101</span></p></div>
-    <div class="card span3"><h3>7月15日 周三</h3><p><b>738 S Ogden Drive</b><br><span class="muted">Los Angeles, CA 90068</span></p></div>
-    <div class="card span3"><h3>7月16日 周四</h3><p><b>738 S Ogden Drive</b><br><span class="muted">Los Angeles, CA 90068</span></p></div>
-    <div class="card span3"><h3>7月17日 周五</h3><p><b>738 S Ogden Drive</b><br><span class="muted">Los Angeles, CA 90068</span></p></div>
-    <div class="card span3"><h3>7月18日 周六</h3><span class="tag blue">红眼航班</span><p><b>Flight</b><br><span class="muted">LAX 22:25 → JFK 07:00</span></p></div>
+    <div class="card span3"><h3>7月10日 周五</h3><span class="tag green">已确认</span><p><b>Yosemite Priest Station Cafe & Cabin</b></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Yosemite%20Priest%20Station%20Cafe%20%26%20Cabin" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月11日 周六</h3><p><b>Royal Pacific Motor Inn</b><br><span class="muted">661 Broadway, San Francisco, CA</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Royal%20Pacific%20Motor%20Inn%20661%20Broadway%20San%20Francisco%20CA" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月12日 周日</h3><p><b>Royal Pacific Motor Inn</b><br><span class="muted">661 Broadway, San Francisco, CA</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Royal%20Pacific%20Motor%20Inn%20661%20Broadway%20San%20Francisco%20CA" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月13日 周一</h3><p><b>Portola Hotel</b><br><span class="muted">Two Portola Plaza, Monterey, CA 93940</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Portola%20Hotel%20Two%20Portola%20Plaza%20Monterey%20CA%2093940" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月14日 周二</h3><p><b>San Franciscan Inn and Suites</b><br><span class="muted">109 Bath Street, Santa Barbara, CA 93101</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=San%20Franciscan%20Inn%20and%20Suites%20109%20Bath%20Street%20Santa%20Barbara%20CA%2093101" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月15日 周三</h3><p><b>738 S Ogden Drive</b><br><span class="muted">Los Angeles, CA 90068</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=738%20S%20Ogden%20Drive%20Los%20Angeles%20CA%2090068" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月16日 周四</h3><p><b>738 S Ogden Drive</b><br><span class="muted">Los Angeles, CA 90068</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=738%20S%20Ogden%20Drive%20Los%20Angeles%20CA%2090068" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月17日 周五</h3><p><b>738 S Ogden Drive</b><br><span class="muted">Los Angeles, CA 90068</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=738%20S%20Ogden%20Drive%20Los%20Angeles%20CA%2090068" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="card span3"><h3>7月18日 周六</h3><span class="tag blue">红眼航班</span><p><b>Flight</b><br><span class="muted">LAX 22:25 → JFK 07:00</span></p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=LAX%20Airport" target="_blank" rel="noopener">LAX Google Maps</a></div>
     <div class="card span3"><h3>7月19日 周日</h3><p><b>抵达纽约</b><br><span class="muted">JFK 约 07:00 抵达；恢复、洗衣、整理票据。</span></p></div>
   </div>
 </section>
@@ -172,192 +70,30 @@ a{color:inherit}
 <section class="section">
   <h2>每日中文行程</h2>
   <div class="timeline">
+    <article class="day"><div class="date">7月10日 周五<span class="city">纽约 → 旧金山 → 优胜美地</span></div><div><div class="slots"><div class="slot"><b>上午</b>从 EWR 搭乘 UA1777 前往 SFO。抵达后取车，检查手机电量、导航和车内充电线。</div><div class="slot"><b>下午</b>轻量探索旧金山。可根据体力选择 de Young Museum、Golden Gate 附近，顺路购买路上食物。</div><div class="slot"><b>晚上</b>约下午4点左右开往优胜美地，预计约4小时。不要拖到太晚出发。</div></div><div class="lodging"><b>今晚住宿</b><p>Yosemite Priest Station Cafe & Cabin</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Yosemite%20Priest%20Station%20Cafe%20%26%20Cabin" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://www.famsf.org/visit/de-young" target="_blank" rel="noopener">de Young</a><a href="https://www.parksconservancy.org/parks/golden-gate-bridge" target="_blank" rel="noopener">金门大桥</a><a href="https://www.nps.gov/yose/index.htm" target="_blank" rel="noopener">优胜美地官网</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月10日 周五<span class="city">纽约 → 旧金山 → 优胜美地</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>从 EWR 搭乘 UA1777 前往 SFO。抵达后取车，检查手机电量、导航和车内充电线。</div>
-          <div class="slot"><b>下午</b>轻量探索旧金山。可根据体力选择 de Young Museum、Golden Gate 附近，顺路购买路上食物。</div>
-          <div class="slot"><b>晚上</b>约下午4点左右开往优胜美地，预计约4小时。不要拖到太晚出发。</div>
-        </div>
-        <div class="links">
-          <a href="https://www.famsf.org/visit/de-young" target="_blank">de Young</a>
-          <a href="https://www.parksconservancy.org/parks/golden-gate-bridge" target="_blank">金门大桥</a>
-          <a href="https://www.nps.gov/yose/index.htm" target="_blank">优胜美地官网</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月11日 周六<span class="city">优胜美地 → 旧金山</span></div><div><div class="slots"><div class="slot"><b>上午</b>早起进入主要景点。根据道路与停车情况选择 Glacier Point、Curry Village、Lower Yosemite Fall、Tunnel View。</div><div class="slot"><b>下午</b>继续徒步或前往 Mariposa Grove。若停车和时间不理想，宁可减少点位，保留体验质量。</div><div class="slot"><b>晚上</b>日落前开回旧金山方向。山路和疲劳驾驶要谨慎。</div></div><div class="note">Horsetail Fall 的著名“火瀑布”通常是冬季特定光线现象，7月不要把它作为主要期待。</div><div class="lodging"><b>今晚住宿</b><p>Royal Pacific Motor Inn · 661 Broadway, San Francisco, CA</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Royal%20Pacific%20Motor%20Inn%20661%20Broadway%20San%20Francisco%20CA" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://www.nps.gov/yose/planyourvisit/glacierpoint.htm" target="_blank" rel="noopener">Glacier Point</a><a href="https://www.nps.gov/yose/planyourvisit/mg.htm" target="_blank" rel="noopener">Mariposa Grove</a><a href="https://www.nps.gov/yose/planyourvisit/loweryosemitefalltrail.htm" target="_blank" rel="noopener">Lower Yosemite Fall</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月11日 周六<span class="city">优胜美地</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>早起进入主要景点。根据道路与停车情况选择 Glacier Point、Curry Village、Lower Yosemite Fall、Tunnel View。</div>
-          <div class="slot"><b>下午</b>继续徒步或前往 Mariposa Grove。若停车和时间不理想，宁可减少点位，保留体验质量。</div>
-          <div class="slot"><b>晚上</b>日落前开回旧金山方向。山路和疲劳驾驶要谨慎。</div>
-        </div>
-        <div class="note">Horsetail Fall 的著名“火瀑布”通常是冬季特定光线现象，7月不要把它作为主要期待。</div>
-        <div class="links">
-          <a href="https://www.nps.gov/yose/planyourvisit/glacierpoint.htm" target="_blank">Glacier Point</a>
-          <a href="https://www.nps.gov/yose/planyourvisit/mg.htm" target="_blank">Mariposa Grove</a>
-          <a href="https://www.nps.gov/yose/planyourvisit/loweryosemitefalltrail.htm" target="_blank">Lower Yosemite Fall</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月12日 周日<span class="city">旧金山</span></div><div><div class="slots"><div class="slot"><b>上午</b>从优胜美地长途移动后，安排较慢节奏的恢复型早晨。</div><div class="slot"><b>下午</b>旧金山市区探索：博物馆、公园、海边、街区散步。</div><div class="slot"><b>晚上</b>吃饭、洗衣、整理行李，为一号公路段重新打包。</div></div><div class="lodging"><b>今晚住宿</b><p>Royal Pacific Motor Inn · 661 Broadway, San Francisco, CA</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Royal%20Pacific%20Motor%20Inn%20661%20Broadway%20San%20Francisco%20CA" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://www.sftravel.com/" target="_blank" rel="noopener">旧金山旅游官网</a><a href="https://sfrecpark.org/770/Golden-Gate-Park" target="_blank" rel="noopener">Golden Gate Park</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月12日 周日<span class="city">旧金山</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>从优胜美地长途移动后，安排较慢节奏的恢复型早晨。</div>
-          <div class="slot"><b>下午</b>旧金山市区探索：博物馆、公园、海边、街区散步。</div>
-          <div class="slot"><b>晚上</b>吃饭、洗衣、整理行李，为一号公路段重新打包。</div>
-        </div>
-        <div class="links">
-          <a href="https://www.sftravel.com/" target="_blank">旧金山旅游官网</a>
-          <a href="https://sfrecpark.org/770/Golden-Gate-Park" target="_blank">Golden Gate Park</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月13日 周一<span class="city">旧金山 → Monterey</span></div><div><div class="slots"><div class="slot"><b>上午</b>早起，买咖啡，检查车辆、油量、水、零食、充电器。</div><div class="slot"><b>下午</b>旧金山最后半天或开始南下 Monterey，避免安排太分散。</div><div class="slot"><b>晚上</b>确认退房、酒店、路线、一号公路状态和第二天出发时间。</div></div><div class="lodging"><b>今晚住宿</b><p>Portola Hotel · Two Portola Plaza, Monterey, CA 93940</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=Portola%20Hotel%20Two%20Portola%20Plaza%20Monterey%20CA%2093940" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路封路状态</a><a href="https://www.sftravel.com/" target="_blank" rel="noopener">旧金山旅游官网</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月13日 周一<span class="city">旧金山</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>早起，买咖啡，检查车辆、油量、水、零食、充电器。</div>
-          <div class="slot"><b>下午</b>最后半天旧金山探索，避免安排太分散。</div>
-          <div class="slot"><b>晚上</b>确认退房、酒店、路线、一号公路状态和第二天出发时间。</div>
-        </div>
-        <div class="links">
-          <a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a>
-          <a href="https://www.sftravel.com/" target="_blank">旧金山旅游官网</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月14日 周二<span class="city">Monterey → 一号公路 → Santa Barbara</span></div><div><div class="slots"><div class="slot"><b>上午</b>加满油，下载离线地图、播放列表和播客。离开 Monterey 南下。</div><div class="slot"><b>下午</b>一号公路核心段：Bixby Bridge、Big Sur 沿线。实时确认封路，不要盲目开到断点。</div><div class="slot"><b>晚上</b>经过象海豹观景点、Cambria，继续前往 Santa Barbara。夜间沿海公路不要疲劳驾驶。</div></div><div class="lodging"><b>今晚住宿</b><p>San Franciscan Inn and Suites · 109 Bath Street, Santa Barbara, CA 93101</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=San%20Franciscan%20Inn%20and%20Suites%20109%20Bath%20Street%20Santa%20Barbara%20CA%2093101" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路封路状态</a><a href="https://www.bigsurcalifornia.org/" target="_blank" rel="noopener">Big Sur</a><a href="https://elephantseal.org/" target="_blank" rel="noopener">象海豹观景点</a><a href="https://santabarbaraca.com/" target="_blank" rel="noopener">Santa Barbara</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月14日 周二<span class="city">旧金山 → 一号公路 → Big Sur / Cambria</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>加满油，下载离线地图、播放列表和播客。离开旧金山南下。</div>
-          <div class="slot"><b>下午</b>一号公路核心段：Bixby Bridge、Big Sur 沿线。实时确认封路，不要盲目开到断点。</div>
-          <div class="slot"><b>晚上</b>象海豹观景点、Cambria、日落。夜间沿海公路不要疲劳驾驶。</div>
-        </div>
-        <div class="links">
-          <a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a>
-          <a href="https://www.bigsurcalifornia.org/" target="_blank">Big Sur</a>
-          <a href="https://elephantseal.org/" target="_blank">象海豹观景点</a>
-          <a href="https://visitcambriaca.com/" target="_blank">Cambria</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月15日 周三<span class="city">Santa Barbara → LA</span></div><div><div class="slots"><div class="slot"><b>上午</b>Santa Barbara 轻量早晨，可散步、咖啡、海边。</div><div class="slot"><b>下午</b>可经 Solvang 或直接南下洛杉矶。一个偏小镇记忆，一个偏城市节奏。</div><div class="slot"><b>晚上</b>抵达洛杉矶。不要把当天塞得太满，避免到 LA 时过累。</div></div><div class="lodging"><b>今晚住宿</b><p>738 S Ogden Drive, Los Angeles, CA 90068</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=738%20S%20Ogden%20Drive%20Los%20Angeles%20CA%2090068" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener">一号公路封路状态</a><a href="https://www.solvangusa.com/" target="_blank" rel="noopener">Solvang</a><a href="https://santabarbaraca.com/" target="_blank" rel="noopener">Santa Barbara</a><a href="https://www.discoverlosangeles.com/" target="_blank" rel="noopener">洛杉矶旅游官网</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月15日 周三<span class="city">Cambria → Solvang → Santa Barbara → LA</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>从 Cambria 出发，沿海岸继续南下。根据路况决定停留密度。</div>
-          <div class="slot"><b>下午</b>Solvang 和 Santa Barbara。一个偏小镇记忆，一个偏海岸城市节奏。</div>
-          <div class="slot"><b>晚上</b>抵达洛杉矶。不要把当天塞得太满，避免到 LA 时过累。</div>
-        </div>
-        <div class="links">
-          <a href="https://quickmap.dot.ca.gov/" target="_blank">一号公路封路状态</a>
-          <a href="https://www.solvangusa.com/" target="_blank">Solvang</a>
-          <a href="https://santabarbaraca.com/" target="_blank">Santa Barbara</a>
-          <a href="https://www.discoverlosangeles.com/" target="_blank">洛杉矶旅游官网</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月16日 周四<span class="city">洛杉矶 → 圣地亚哥 → 洛杉矶</span></div><div><div class="slots"><div class="slot"><b>上午</b>Salk Institute 10:00 tour。需要很早从 LA 出发，预留交通时间。</div><div class="slot"><b>下午</b>圣地亚哥轻量探索。不要安排太多需要预约的点。</div><div class="slot"><b>晚上</b>返回 LA 或视体力调整。当天重点是 Salk，不是把 San Diego 全部看完。</div></div><div class="lodging"><b>今晚住宿</b><p>738 S Ogden Drive, Los Angeles, CA 90068</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=738%20S%20Ogden%20Drive%20Los%20Angeles%20CA%2090068" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://www.salk.edu/" target="_blank" rel="noopener">Salk Institute</a><a href="https://www.salk.edu/about/history-of-salk/" target="_blank" rel="noopener">Salk 历史</a><a href="https://www.sandiego.org/" target="_blank" rel="noopener">圣地亚哥旅游官网</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月16日 周四<span class="city">洛杉矶 → 圣地亚哥 → 洛杉矶</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>Salk Institute 10:00 tour。需要很早从 LA 出发，预留交通时间。</div>
-          <div class="slot"><b>下午</b>圣地亚哥轻量探索。不要安排太多需要预约的点。</div>
-          <div class="slot"><b>晚上</b>返回 LA 或视体力调整。当天重点是 Salk，不是把 San Diego 全部看完。</div>
-        </div>
-        <div class="links">
-          <a href="https://www.salk.edu/" target="_blank">Salk Institute</a>
-          <a href="https://www.salk.edu/about/history-of-salk/" target="_blank">Salk 历史</a>
-          <a href="https://www.sandiego.org/" target="_blank">圣地亚哥旅游官网</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月17日 周五<span class="city">洛杉矶</span></div><div><div class="slots"><div class="slot"><b>上午</b>开放型 LA 日程。根据天气、交通和体力选择建筑、海边或街区。</div><div class="slot"><b>下午</b>可以安排较有记忆点的空间体验、餐厅或城市观察。</div><div class="slot"><b>晚上</b>保持轻松，为最后一天和红眼航班保留体力。</div></div><div class="lodging"><b>今晚住宿</b><p>738 S Ogden Drive, Los Angeles, CA 90068</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=738%20S%20Ogden%20Drive%20Los%20Angeles%20CA%2090068" target="_blank" rel="noopener">打开 Google Maps</a></div><div class="links"><a href="https://www.discoverlosangeles.com/" target="_blank" rel="noopener">洛杉矶旅游官网</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月17日 周五<span class="city">洛杉矶</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>开放型 LA 日程。根据天气、交通和体力选择建筑、海边或街区。</div>
-          <div class="slot"><b>下午</b>可以安排较有记忆点的空间体验、餐厅或城市观察。</div>
-          <div class="slot"><b>晚上</b>保持轻松，为最后一天和红眼航班保留体力。</div>
-        </div>
-        <div class="links">
-          <a href="https://www.discoverlosangeles.com/" target="_blank">洛杉矶旅游官网</a>
-        </div>
-      </div>
-    </article>
+    <article class="day"><div class="date">7月18日 周六<span class="city">洛杉矶 → 纽约</span></div><div><div class="slots"><div class="slot"><b>上午</b>LA 自由活动。开始整理行李，不要把所有整理留到晚上。</div><div class="slot"><b>下午</b>LACMA。确认展览、停车、闭馆时间和票务。</div><div class="slot"><b>晚上</b>前往 LAX，搭乘 22:25 JetBlue B6 1524 红眼航班去 JFK。</div></div><div class="lodging"><b>夜间安排</b><p>红眼航班 · LAX 22:25 → JFK 07:00</p><a class="mapBtn" href="https://www.google.com/maps/search/?api=1&query=LAX%20Airport" target="_blank" rel="noopener">打开 LAX Google Maps</a></div><div class="links"><a href="https://www.lacma.org/" target="_blank" rel="noopener">LACMA</a><a href="https://www.flylax.com/" target="_blank" rel="noopener">LAX 官方</a><a href="https://www.jetblue.com/" target="_blank" rel="noopener">JetBlue</a></div></div></article>
 
-    <article class="day">
-      <div class="date">7月18日 周六<span class="city">洛杉矶 → 纽约</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>LA 自由活动。开始整理行李，不要把所有整理留到晚上。</div>
-          <div class="slot"><b>下午</b>LACMA。确认展览、停车、闭馆时间和票务。</div>
-          <div class="slot"><b>晚上</b>前往 LAX，搭乘 22:25 JetBlue B6 1524 红眼航班去 JFK。</div>
-        </div>
-        <div class="links">
-          <a href="https://www.lacma.org/" target="_blank">LACMA</a>
-          <a href="https://www.flylax.com/" target="_blank">LAX 官方</a>
-          <a href="https://www.jetblue.com/" target="_blank">JetBlue</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="date">7月19日 周日<span class="city">纽约</span></div>
-      <div>
-        <div class="slots">
-          <div class="slot"><b>上午</b>约 07:00 抵达 JFK。先处理交通和恢复。</div>
-          <div class="slot"><b>下午</b>洗衣、整理票据、照片备份、检查遗失物品。</div>
-          <div class="slot"><b>晚上</b>为回到工作状态做低强度恢复。</div>
-        </div>
-        <div class="links">
-          <a href="https://www.jfkairport.com/" target="_blank">JFK 官方</a>
-        </div>
-      </div>
-    </article>
-
+    <article class="day"><div class="date">7月19日 周日<span class="city">纽约</span></div><div><div class="slots"><div class="slot"><b>上午</b>约 07:00 抵达 JFK。先处理交通和恢复。</div><div class="slot"><b>下午</b>洗衣、整理票据、照片备份、检查遗失物品。</div><div class="slot"><b>晚上</b>为回到工作状态做低强度恢复。</div></div><div class="links"><a href="https://www.jfkairport.com/" target="_blank" rel="noopener">JFK 官方</a></div></div></article>
   </div>
 </section>
 
-<section class="section">
-  <h2>中文提醒清单</h2>
-  <div class="grid">
-    <div class="card span4">
-      <h3>每天早上</h3>
-      <p>确认天气、路线、停车、门票、油量、电量、当天最重要的一件事。</p>
-    </div>
-
-    <div class="card span4">
-      <h3>每天晚上</h3>
-      <p>充电、下载地图、整理衣物、检查第二天开车时间和预约时间。</p>
-    </div>
-
-    <div class="card span4">
-      <h3>路上原则</h3>
-      <p>不要为了多打卡牺牲体验质量。加州这条线的价值在移动中的风景、节奏和记忆。</p>
-    </div>
-  </div>
-</section>
-
-<section class="section printOnly">
-  <h2>打印版备注</h2>
-  <p>建议打印：中文行程、护照复印件、航班、酒店、租车、门票、优胜美地规则、一号公路状态查询链接、紧急联系人。</p>
-</section>
-
+<section class="section"><h2>中文提醒清单</h2><div class="grid"><div class="card span4"><h3>每天早上</h3><p>确认天气、路线、停车、门票、油量、电量、当天最重要的一件事。</p></div><div class="card span4"><h3>每天晚上</h3><p>充电、下载地图、整理衣物、检查第二天开车时间和预约时间。</p></div><div class="card span4"><h3>路上原则</h3><p>不要为了多打卡牺牲体验质量。加州这条线的价值在移动中的风景、节奏和记忆。</p></div></div></section>
+<section class="section printOnly"><h2>打印版备注</h2><p>建议打印：中文行程、护照复印件、航班、酒店、租车、门票、优胜美地规则、一号公路状态查询链接、紧急联系人。打印时，Google Maps 按钮后会显示完整链接。</p></section>
 </div>
 </body>
 </html>
