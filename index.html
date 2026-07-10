@@ -12,6 +12,7 @@
     nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}.brand{font-weight:950;letter-spacing:-.03em;font-size:18px}.navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);padding:9px 13px;color:var(--muted);font-size:13px;font-weight:800}
     .hero{padding:44px 0 32px;display:grid;grid-template-columns:1fr;gap:26px}.eyebrow{text-transform:uppercase;letter-spacing:.1em;color:#53677a;font-size:12px;font-weight:950;margin-bottom:14px}h1{font-size:clamp(42px,7vw,76px);line-height:.95;letter-spacing:-.065em;margin:0 0 18px}.hero p{font-size:18px;line-height:1.6;color:#38485a;max-width:760px;margin:0 0 22px}
     .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:900;background:var(--blue);color:#fff;border:1px solid var(--blue)}.button.secondary{background:#fff;color:var(--blue)}
+    .navlinks a[data-protected]::after,.button[data-protected]::after{content:"PIN";display:inline-flex;align-items:center;justify-content:center;margin-left:7px;padding:2px 6px;border-radius:999px;background:rgba(11,90,156,.10);border:1px solid rgba(11,90,156,.18);color:var(--blue);font-size:10px;letter-spacing:.08em;font-weight:950}.button[data-protected]::before{content:"🔒";font-size:12px}.button:not(.secondary)[data-protected]::after{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.28);color:#fff}
     .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:22px 0 16px}h2{font-size:34px;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);max-width:620px;line-height:1.5;margin:0}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-bottom:36px}.card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}.visual{min-height:170px;background:linear-gradient(135deg,#e8f5fb,#fff);padding:18px;border-bottom:1px solid var(--line)}.visualTitle{height:26px;border-radius:999px;background:#0b5a9c;width:110px;margin-bottom:16px}.sandbox .visualTitle{background:#172033}.trip .visualTitle{background:var(--green)}.content{padding:22px}.content h3{font-size:24px;letter-spacing:-.035em;margin:0 0 10px}.content p{line-height:1.55;color:#3a4657;margin:0 0 16px}.features{display:grid;gap:8px;margin:0 0 18px;padding:0;list-style:none}.features li{display:flex;gap:8px;color:#3a4657}.features li:before{content:"•";color:var(--blue);font-weight:950}.sandbox .features li:before{color:#172033}.trip .features li:before{color:var(--green)}.links{display:flex;gap:10px;flex-wrap:wrap}.text-link{display:inline-flex;align-items:center;text-decoration:none;font-weight:900;color:var(--blue)}
     .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{background:#fff;border:1px solid #d9e2eb;border-radius:16px;padding:12px;min-height:64px}.tile strong{display:block;font-size:18px;letter-spacing:-.04em}.tile span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}.postits{display:grid;grid-template-columns:1fr 1fr;gap:10px}.postit{min-height:64px;border:1px solid #172033;background:#fff0a9;box-shadow:4px 4px 0 rgba(20,40,70,.08);padding:10px;transform:rotate(-2deg)}.postit:nth-child(2){background:#dce7cf;transform:rotate(1deg)}.postit:nth-child(3){background:#e8d8ae;transform:rotate(2deg)}.postit:nth-child(4){background:#f6dfa2;transform:rotate(-1deg)}.postit b{display:block;font-size:12px;line-height:1.05}.blank{border:1px dashed #9aa8b8;background:rgba(255,255,255,.72);border-radius:18px;min-height:116px;display:flex;align-items:center;justify-content:center;color:#667386;font-weight:900;text-align:center;padding:16px}
@@ -48,7 +49,7 @@
 
     <div class="section-head">
       <h2>Choose a page</h2>
-      <p>Tab 5 is now a clickable Trip page placeholder. It can become the California itinerary page when the travel content is ready.</p>
+      <p>Tab 5 is now a clickable Trip page placeholder. The other working tabs require the six-digit PIN before opening.</p>
     </div>
 
     <section class="cards">
@@ -79,5 +80,35 @@
     </section>
   </div>
   <footer>WLB · Index page only · Pages are separate and should not be read as one combined plan</footer>
+  <script>
+    (function(){
+      const PIN = '123456';
+      const SESSION_KEY = 'wlb-pin-unlocked';
+      const protectedFiles = new Set(['wei-balance-plan.html','self-direction-dashboard.html','comhab-theme-board.html','sandbox.html']);
+      function fileNameFromHref(href){
+        try{return new URL(href, window.location.href).pathname.split('/').filter(Boolean).pop() || 'index.html';}
+        catch(e){return '';}
+      }
+      function askForPin(){
+        if(sessionStorage.getItem(SESSION_KEY)==='true') return true;
+        const attempt = window.prompt('Enter 6-digit PIN to open this tab:');
+        if(attempt===PIN){
+          sessionStorage.setItem(SESSION_KEY,'true');
+          return true;
+        }
+        if(attempt!==null) window.alert('Incorrect PIN. Please try again.');
+        return false;
+      }
+      document.querySelectorAll('a[href]').forEach(link=>{
+        const file = fileNameFromHref(link.getAttribute('href'));
+        if(!protectedFiles.has(file)) return;
+        link.dataset.protected = 'true';
+        link.setAttribute('aria-label', `${link.textContent.trim()} — PIN required`);
+        link.addEventListener('click', event=>{
+          if(!askForPin()) event.preventDefault();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
